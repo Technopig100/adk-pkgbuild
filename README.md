@@ -1,2 +1,2 @@
-# Carli PKGBUILDs
+# Frost PKGBUILDs
 
