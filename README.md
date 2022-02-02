@@ -1,2 +1,2 @@
-# Frost PKGBUILDs
+# ADK PKGBUILDs
 
