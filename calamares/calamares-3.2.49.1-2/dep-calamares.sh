@@ -1,3 +1,4 @@
+sudo pacman -Syy
 sudo pacman -S --needed --noconfirm kconfig
 sudo pacman -S --needed --noconfirm kcoreaddons
 sudo pacman -S --needed --noconfirm kiconthemes
