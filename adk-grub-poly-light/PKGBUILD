@@ -1,8 +1,8 @@
 # Maintainer: Dimitris Kiziridis <ragouel at outlook dot com>
-# Maintainer: erik.dubois@gmail.com
+# Maintainer: Jacob Durant
 pkgname=adk-grub-poly-light
-pkgver=r3.5423a6b
-pkgrel=2
+pkgver=r7.49cf0a2
+pkgrel=1
 pkgdesc='Simple light GRUB theme'
 arch=('any')
 url='https://github.com/Technopig100'

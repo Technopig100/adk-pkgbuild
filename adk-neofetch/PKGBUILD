@@ -3,10 +3,10 @@
 pkgname=adk-neofetch
 _pkgname=adk-neofetch
 pkgver=7.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A CLI system information tool written in BASH that supports displaying images."
 arch=('any')
-url="https://faireygitea2.duckdns.org/jacob/${_pkgname}"
+url="https://github.com/Technopig100/${_pkgname}"
 license=('MIT')
 provides=($_pkgname)
 conflicts=($_pkgname)
@@ -26,7 +26,7 @@ optdepends=(
   'xorg-xwininfo: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal'
 )
 makedepends=('git')
-source=("$_pkgname::git+https://faireygitea2.duckdns.org/jacob/neofetch.git")
+source=("$_pkgname::git+https://github.com/Technopig100/adk-neofetch")
 md5sums=('SKIP')
 
 package() {

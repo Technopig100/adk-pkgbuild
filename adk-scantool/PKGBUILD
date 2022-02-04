@@ -1,0 +1,22 @@
+pkgname=adk-scantool
+_pkgname=adk-scantool
+pkgver=2.1
+pkgrel=5
+pkgdesc="OBD-II vehicle diagnostic scanner"
+arch=('x86_64')
+url="https://github.com/Technopig100"
+license=(GPL)
+depends=('allegro4')
+source=(${pkgname}::"git+${url}/${pkgname}")
+sha256sums=('SKIP')
+
+build() {
+  cd "${srcdir}"/${_pkgname}
+  curl -L https://github.com/kees/scantool/pull/3.patch | patch -p1
+  make
+}
+
+package () {
+  cd "${srcdir}"/${_pkgname}
+  make install DESTDIR="${pkgdir}"
+}
