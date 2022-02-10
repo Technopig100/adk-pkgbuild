@@ -2,7 +2,7 @@
 pkgname=adk-plasma-config
 _destname1="/etc"
 pkgver=22.02
-pkgrel=05
+pkgrel=09
 pkgdesc="Plasma for ADK"
 arch=('any')
 url="https://github.com/Technopig100"

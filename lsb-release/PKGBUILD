@@ -1,0 +1,26 @@
+# Based on the file created for Arch Linux by:
+# Maintainer: Philip Müller <philm@manjaro.org>
+
+pkgname=lsb-release
+pkgver=1.4
+pkgrel=14
+pkgdesc="LSB version query program"
+arch=('any')
+url="http://www.linuxbase.org/"
+license=('GPL2')
+source=(${pkgname}::"git+https://github.com/Technopig100/${pkgname}.git")
+sha256sums=('SKIP')
+
+build() {
+  cd "$srcdir/$pkgname"
+  make
+}
+
+package() {
+  cd "$srcdir/$pkgname"
+
+  install -Dm 644 lsb_release.1.gz "$pkgdir/usr/share/man/man1/lsb_release"
+  install -Dm 755 lsb_release "$pkgdir/usr/bin/lsb_release"
+  mkdir -p ${pkgdir}/etc
+  install -Dm 644 lsb-release "$pkgdir/etc/"
+}
