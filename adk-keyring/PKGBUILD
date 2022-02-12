@@ -2,7 +2,7 @@
 
 pkgname=adk-keyring
 pkgver=2.1
-pkgrel=9
+pkgrel=10
 pkgdesc="ADK keyring"
 arch=('any')
 url="https://github.com/Technopig100"
@@ -12,7 +12,7 @@ source=('Makefile'
         'adk.gpg'
 	'adk-revoked'
 	'adk-trusted')
-validpgpkeys=('B84D29DC7920803B574888A02C61630AA2A3DE68')
+validpgpkeys=('360DCBA5948FDE5944CA1E2E1A8DE33B5A149FDF')
 md5sums=('dd200885a6a4464c05673c35c0585dea'
          '658fa0e2d4eb31606fa30ee42e65ef7d'
          'c7ebce76fad9770303c4910a768a7b15'
