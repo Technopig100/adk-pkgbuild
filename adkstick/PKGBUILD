@@ -1,7 +1,7 @@
 # Maintainer: Sam Burgos <santiago.burgos1089@gmail.com>
 
 pkgname=adkstick
-pkgver=1.4.7
+pkgver=1.1
 pkgrel=2
 pkgdesc='A GUI to write .img or .iso files to a USB Key. It can also format them'
 arch=('any')

@@ -1,7 +1,7 @@
 # Maintainer: Dimitris Kiziridis <ragouel at outlook dot com>
 # Maintainer: Jacob Durant
 pkgname=adk-grub-poly-light
-pkgver=r9.6e93449
+pkgver=r11.700e295
 pkgrel=1
 pkgdesc='Simple light GRUB theme'
 arch=('any')

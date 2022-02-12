@@ -3,8 +3,8 @@ pkgname=adk-kde-settings
 _destname1="/etc"
 _destname2="/usr/share"
 _destname3="/etc"
-pkgver=22.02
-pkgrel=05
+pkgver=r8.3459884
+pkgrel=1
 pkgdesc="Plasma for ADK"
 arch=('any')
 url="https://github.com/Technopig100"
@@ -16,6 +16,11 @@ provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${pkgname}::"git+${url}/${pkgname}")
 sha256sums=('SKIP')
+
+pkgver() {
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
 package() {
 	install -dm755 ${pkgdir}${_destname1}
 	install -dm755 ${pkgdir}${_destname2}

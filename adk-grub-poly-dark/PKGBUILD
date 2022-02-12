@@ -1,7 +1,7 @@
 # Maintainer: Dimitris Kiziridis <ragouel at outlook dot com>
 # Maintainer: Jacob Durant
 pkgname=adk-grub-poly-dark
-pkgver=r6.7a77098
+pkgver=r8.7871fc6
 pkgrel=1
 pkgdesc='Simple dark GRUB theme'
 arch=('any')

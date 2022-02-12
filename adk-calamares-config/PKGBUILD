@@ -1,11 +1,8 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-calamares-config
 _destname1="/etc"
-_destname2="/etc"
-_destname3="/etc"
-_destname4="/etc"
-pkgver=21.12
-pkgrel=17
+pkgver=r8.3459884
+pkgrel=1
 pkgdesc="calamares for adk-linux"
 arch=('any')
 url="https://github.com/Technopig100"
@@ -17,6 +14,11 @@ provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${pkgname}::"git+${url}/${pkgname}")
 sha256sums=('SKIP')
+
+pkgver() {
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
 package() {
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}

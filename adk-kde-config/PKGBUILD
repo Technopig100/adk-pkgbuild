@@ -1,12 +1,9 @@
 # Maintainer: Erik Dubois <erik.dubois@gmail.com>
-pkgname=adk-system-installation
-_destname1="/etc/skel/Desktop"
-_destname2="/etc"
-_destname3="/etc"
-_destname4="/etc"
+pkgname=adk-kde-config
+_destname1="/etc"
 pkgver=r8.3459884
 pkgrel=1
-pkgdesc="System files for ADK"
+pkgdesc="Plasma for ADK"
 arch=('any')
 url="https://github.com/Technopig100"
 license=('GPL3')

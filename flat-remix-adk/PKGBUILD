@@ -1,8 +1,8 @@
 # Maintainer: Daniel Ruiz de Alegria <daniruizdealegria@gmail.com>
 
 pkgname="flat-remix-adk"
-pkgver=20211214
-pkgrel=1
+pkgver=r8.3459884
+pkgrel=3
 pkgdesc="Flat Remix is an icon theme inspired by material design. It is mostly flat using a colorful palette with some shadows, highlights, and gradients for some depth."
 arch=('any')
 url="https://github.com/Technopig100/flat-remix-adk"
@@ -10,6 +10,10 @@ license=('GPL3')
 options=('!strip')
 source=(${pkgname}::"git+https://github.com/Technopig100/${pkgname}.git")
 sha256sums=('SKIP')
+
+pkgver() {
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
 
 package() {
 	cd "${srcdir}/${pkgname}/"
