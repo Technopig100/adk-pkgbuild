@@ -1,0 +1,2 @@
+sudo pacman-key --recv-keys 360DCBA5948FDE5944CA1E2E1A8DE33B5A149FDF --keyserver hkps://keyserver.ubuntu.com
+sudo pacman-key --lsign-key 360DCBA5948FDE5944CA1E2E1A8DE33B5A149FDF 
