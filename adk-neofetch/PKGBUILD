@@ -1,5 +1,4 @@
-# Maintainer: Dylan Araps <dyl@tfwno.gf>
-# Maintainer: Jacob Durant
+## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-neofetch
 _pkgname=adk-neofetch
 pkgver=r12.6b152ca

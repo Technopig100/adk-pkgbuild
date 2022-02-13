@@ -1,4 +1,4 @@
-# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-kde-config
 _destname1="/etc"
 pkgver=r12.6b152ca

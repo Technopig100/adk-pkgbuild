@@ -1,5 +1,4 @@
-# Maintainer: Dimitris Kiziridis <ragouel at outlook dot com>
-# Maintainer: Jacob Durant
+## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-poly-light
 pkgver=r11.700e295
 pkgrel=1
@@ -7,7 +6,7 @@ pkgdesc='Simple light GRUB theme'
 arch=('any')
 url='https://github.com/Technopig100'
 license=('MIT')
-optdepends=('grub-customizer: GUI tool to configure GRUB')
+optdepends=('')
 makedepends=('git')
 source=("poly-light::git+https://github.com/Technopig100/frost-grub-poly-light")
 sha256sums=('SKIP')

@@ -1,5 +1,4 @@
-# Based on the file created for Arch Linux by:
-# Maintainer: Philip Müller <philm@manjaro.org>
+## Maintainer: Jacob Durant <technopig@hotmail.com>
 
 pkgname=lsb-release
 pkgver=1.4

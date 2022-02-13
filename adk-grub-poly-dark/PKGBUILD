@@ -1,5 +1,4 @@
-# Maintainer: Dimitris Kiziridis <ragouel at outlook dot com>
-# Maintainer: Jacob Durant
+## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-poly-dark
 pkgver=r8.7871fc6
 pkgrel=1

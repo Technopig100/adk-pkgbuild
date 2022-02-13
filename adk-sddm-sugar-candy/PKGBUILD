@@ -1,4 +1,4 @@
-# Maintainer: Jacob Durant <technopig@hotmail.com>
+## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-sddm-sugar-candy
 _pkgname=adk-sddm-sugar-candy
 _destname1="/usr"
