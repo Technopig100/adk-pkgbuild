@@ -8,7 +8,7 @@ url='https://github.com/Technopig100'
 license=('MIT')
 optdepends=('')
 makedepends=('git')
-source=("poly-light::git+https://github.com/Technopig100/frost-grub-poly-light")
+source=("poly-light::git+https://github.com/Technopig100/adk-grub-poly-light")
 sha256sums=('SKIP')
 
 pkgver() {
