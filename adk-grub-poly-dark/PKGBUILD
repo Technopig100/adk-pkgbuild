@@ -1,6 +1,6 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-poly-dark
-pkgver=r8.7871fc6
+pkgver=r9.98a173c
 pkgrel=1
 pkgdesc='Simple dark GRUB theme'
 arch=('any')

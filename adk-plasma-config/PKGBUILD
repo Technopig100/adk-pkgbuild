@@ -1,7 +1,7 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-plasma-config
 _destname1="/etc"
-pkgver=r12.6b152ca
+pkgver=r15.f271cd4
 pkgrel=1
 pkgdesc="Plasma for ADK"
 arch=('any')

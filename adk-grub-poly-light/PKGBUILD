@@ -1,6 +1,6 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-poly-light
-pkgver=r11.700e295
+pkgver=r12.1bc8226
 pkgrel=1
 pkgdesc='Simple light GRUB theme'
 arch=('any')

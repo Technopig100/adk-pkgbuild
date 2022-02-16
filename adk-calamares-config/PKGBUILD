@@ -1,8 +1,8 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-calamares-config
 _destname1="/etc"
-pkgver=r14.5f133ea
-pkgrel=1
+pkgver=r15.f271cd4
+pkgrel=2
 pkgdesc="calamares for adk-linux"
 arch=('any')
 url="https://github.com/Technopig100"
