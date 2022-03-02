@@ -1,7 +1,7 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-system-installation
 _destname1="/etc/skel/Desktop"
-pkgver=r15.f271cd4
+pkgver=r.
 pkgrel=1
 pkgdesc="System files for ADK"
 arch=('any')

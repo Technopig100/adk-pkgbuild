@@ -1,8 +1,8 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-neofetch
 _pkgname=adk-neofetch
-pkgver=r15.f271cd4
-pkgrel=1
+pkgver=22.03
+pkgrel=2
 pkgdesc="A CLI system information tool written in BASH that supports displaying images."
 arch=('any')
 url="https://github.com/Technopig100/${_pkgname}"
@@ -27,10 +27,6 @@ optdepends=(
 makedepends=('git')
 source=("$_pkgname::git+https://github.com/Technopig100/adk-neofetch")
 md5sums=('SKIP')
-
-pkgver() {
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-}
 
 package() {
   cd $pkgname

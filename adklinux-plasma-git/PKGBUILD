@@ -1,0 +1,39 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adklinux-plasma-git
+_pkgname=adklinux-plasma
+_destname1="/etc/skel/.config/"
+_destname2="/etc/skel/.local/share/"
+_destname3="/etc/xdg/"
+_destname4="/etc/skel/"
+_licensedir="/usr/share/adklinux/licenses/"
+pkgver=22.03
+pkgrel=3
+pkgdesc="AdkLinux Plasma Desktop Settings"
+arch=('any')
+url="https://github.com/Technopig100/adklinux-plasma"
+license=('GPL3')
+makedepends=('git')
+depends=('kinit')
+conflicts=('adklinux-plasma-nemesis-git')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
+
+	install -dm755 ${pkgdir}${_destname3}
+	cp -r  ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}
+    
+ 	cp -r  ${srcdir}/${_pkgname}${_destname4}.face ${pkgdir}${_destname4}
+
+	cp -r  ${srcdir}/${_pkgname}${_destname4}.face.icon ${pkgdir}${_destname4}
+}

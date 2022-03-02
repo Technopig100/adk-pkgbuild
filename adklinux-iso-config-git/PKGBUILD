@@ -1,0 +1,29 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adklinux-iso-config-git
+_pkgname=adklinux-iso-config
+_destname1="/etc/pacman.d/hooks/"
+_destname2="/usr/lib/"
+pkgver=22.03
+pkgrel=2
+pkgdesc="AdkLinux Plasma Desktop Settings"
+arch=('any')
+url="https://github.com/Technopig100/adklinux-plasma"
+license=('GPL3')
+makedepends=('git')
+depends=('kinit')
+conflicts=('adklinux-plasma-nemesis-git')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+#install='readme.install'
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}lsb-release.hook ${pkgdir}${_destname1}
+
+	cp -r  ${srcdir}/${_pkgname}${_destname1}os-release.hook ${pkgdir}${_destname1}
+
+    install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destname2}adk-release ${pkgdir}${_destname2}
+
+}

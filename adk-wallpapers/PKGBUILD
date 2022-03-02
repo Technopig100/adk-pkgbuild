@@ -2,7 +2,7 @@
 pkgname=adk-wallpapers
 _pkgname=adk-wallpapers
 _destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
-pkgver=r15.f271cd4
+pkgver=r.
 pkgrel=1
 pkgdesc="Wallpapers for adk-linux"
 arch=('any')

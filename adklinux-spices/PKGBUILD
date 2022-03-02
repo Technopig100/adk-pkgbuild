@@ -1,0 +1,22 @@
+# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+pkgname=adklinux-spices-git
+_pkgname=adklinux-spices
+_destname1="/usr"
+_licensedir="/usr/share/adklinux/licenses/"
+pkgver=21.07
+pkgrel=06
+pkgdesc="adklinux tool for Arch Linux based Operating Systems - getting the spices in"
+arch=('any')
+url="https://github.com/Technopig100"
+license=('GPL3')
+depends=('python-gobject')
+makedepends=('git')
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+${url}/${_pkgname}")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	cp -r ${srcdir}/${_pkgname}/${_destname1} ${pkgdir}
+}

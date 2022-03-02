@@ -1,8 +1,8 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 
 pkgname="flat-remix-adk"
-pkgver=r15.f271cd4
-pkgrel=3
+pkgver=r.
+pkgrel=1
 pkgdesc="Flat Remix is an icon theme inspired by material design. It is mostly flat using a colorful palette with some shadows, highlights, and gradients for some depth."
 arch=('any')
 url="https://github.com/Technopig100/flat-remix-adk"
