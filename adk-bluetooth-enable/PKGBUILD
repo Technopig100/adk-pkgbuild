@@ -1,15 +1,15 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-printer-enable-git
-_pkgname=adk-printer-enable
+pkgname=adk-bluetooth-enable-git
+_pkgname=adk-bluetooth-enable
 _destname1="/etc"
 _licensedir="/usr/share/adklinux/licenses/"
 pkgver=22.4
 pkgrel=1
-pkgdesc="Enable cups printer service for ADK-Linux"
+pkgdesc="Enable bluetooth service for ADK-Linux"
 arch=('any')
 url="https://github.com/Technopig100/${_pkgname}"
 license=('GPL3')
-depends=('cups' 'avahi')
+depends=('bluez' 'bluez-utils')
 install=$_pkgname.install
 makedepends=('git')
 options=(!strip !emptydirs)
