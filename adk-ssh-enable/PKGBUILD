@@ -1,0 +1,25 @@
+## Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-ssh-enable-git
+_pkgname=adk-ssh-enable
+_destname1="/etc"
+_licensedir="/usr/share/adklinux/licenses/"
+pkgver=22.4
+pkgrel=1
+pkgdesc="Enable OpenSSH service for ADK-Linux"
+arch=('any')
+url="https://github.com/Technopig100/${_pkgname}"
+license=('GPL3')
+depends=('openssh')
+install=$_pkgname.install
+makedepends=('git')
+options=(!strip !emptydirs)
+replaces=()
+source=(${_pkgname}::git+$url)
+sha256sums=('SKIP')
+
+package() {
+  install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+  install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+  cp -r ${srcdir}/${_pkgname}/${_destname1} ${pkgdir}
+}
