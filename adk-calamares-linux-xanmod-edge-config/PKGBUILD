@@ -1,8 +1,8 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-calamares-config
+pkgname=adk-calamares-config-xanmod
 _destname1="/etc"
-pkgver=22.04
-pkgrel=1
+pkgver=22.03
+pkgrel=5
 pkgdesc="calamares for adk-linux"
 arch=('any')
 url="https://github.com/Technopig100"

@@ -1,0 +1,24 @@
+## Maintainer: Jacob Durant <technopig@hotmail.com>
+
+pkgname="adk-dark-git"
+_pkgname="adk-dark"
+_destname1="/usr/share/icons/"
+_licensedir="/usr/share/adklinux/licenses/"
+pkgver=22.03
+pkgrel=3
+pkgdesc="ADK-Dark is a mix of Flat Remix icon theme inspired by material design. It is mostly flat using a colorful palette with some shadows, highlights, and gradients for some depth."
+arch=('any')
+url="https://github.com/Technopig100/adk-dark"
+license=('GPL3')
+options=('!strip')
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}* ${pkgdir}${_destname1}
+}
+

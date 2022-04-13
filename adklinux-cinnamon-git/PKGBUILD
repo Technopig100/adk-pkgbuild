@@ -1,20 +1,17 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adklinux-plasma-git
-_pkgname=adklinux-plasma
+pkgname=adklinux-cinnamon-git
+_pkgname=adklinux-cinnamon
 _destname1="/etc/skel/.config/"
-_destname2="/etc/skel/.local/share/"
-_destname3="/etc/xdg/"
-_destname4="/etc/skel/"
+_destname2="/etc/skel/.cinnamon/"
 _licensedir="/usr/share/adklinux/licenses/"
-pkgver=22.03
-pkgrel=5
-pkgdesc="AdkLinux Plasma Desktop Settings"
+pkgver=21.10
+pkgrel=20
+pkgdesc="Desktop configuration for ADK-Linux Vista"
 arch=('any')
-url="https://github.com/Technopig100/adklinux-plasma"
+url="https://github.com/Technopig100/adklinux-cinnamon"
 license=('GPL3')
 makedepends=('git')
-depends=('kinit')
-conflicts=('adklinux-plasma-nemesis-git')
+depends=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
@@ -29,11 +26,4 @@ package() {
 
 	install -dm755 ${pkgdir}${_destname2}
 	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
-
-	install -dm755 ${pkgdir}${_destname3}
-	cp -r  ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}
-    
- 	cp -r  ${srcdir}/${_pkgname}${_destname4}.face ${pkgdir}${_destname4}
-
-	cp -r  ${srcdir}/${_pkgname}${_destname4}.face.icon ${pkgdir}${_destname4}
 }

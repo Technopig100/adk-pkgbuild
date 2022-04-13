@@ -1,7 +1,7 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-system-installation
 _destname1="/etc/skel/Desktop"
-pkgver=r.
+pkgver=22.03
 pkgrel=1
 pkgdesc="System files for ADK"
 arch=('any')
@@ -14,10 +14,6 @@ provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${pkgname}::"git+${url}/${pkgname}")
 sha256sums=('SKIP')
-
-pkgver() {
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-}
 
 package() {
 	install -dm755 ${pkgdir}${_destname1}

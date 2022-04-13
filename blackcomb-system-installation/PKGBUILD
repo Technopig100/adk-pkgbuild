@@ -1,9 +1,9 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-calamares-config
-_destname1="/etc"
-pkgver=22.04
+pkgname=blackcomb-system-installation
+_destname1="/etc/skel/Desktop"
+pkgver=22.03
 pkgrel=1
-pkgdesc="calamares for adk-linux"
+pkgdesc="System files for Blackcomb"
 arch=('any')
 url="https://github.com/Technopig100"
 license=('GPL3')

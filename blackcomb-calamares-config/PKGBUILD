@@ -1,9 +1,12 @@
-## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-calamares-config
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=blackcomb-calamares-config
 _destname1="/etc"
-pkgver=22.04
-pkgrel=1
-pkgdesc="calamares for adk-linux"
+_destname2="/etc"
+_destname3="/etc"
+_destname4="/etc"
+pkgver=21.12
+pkgrel=03
+pkgdesc="calamares for blackcomb"
 arch=('any')
 url="https://github.com/Technopig100"
 license=('GPL3')
@@ -14,7 +17,6 @@ provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${pkgname}::"git+${url}/${pkgname}")
 sha256sums=('SKIP')
-
 package() {
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}
