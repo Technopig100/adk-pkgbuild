@@ -1,8 +1,9 @@
 post_install() {
   echo
+  systemctl enable --now cups.service
+  systemctl enable --now avahi-daemon.service
+  echo
   tput setaf 2
-  echo "systemctl enable --now cups.service"
-  echo "systemctl enable --now avahi-daemon.service"
   echo "[Printer services enabled]"
   echo
   tput sgr0
