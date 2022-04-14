@@ -2,7 +2,8 @@
 pkgname=adk-wallpapers
 _pkgname=adk-wallpapers
 _destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
-pkgver=22.03
+_destname2="/usr/share/backgrounds/blackcomb/"
+pkgver=22.04
 pkgrel=1
 pkgdesc="Wallpapers for adk-linux"
 arch=('any')
@@ -20,4 +21,7 @@ install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
 
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destnam2}* ${pkgdir}${_destname2}
 } 
