@@ -1,13 +1,13 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-wallpapers
-_pkgname=adk-wallpapers
-_destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
-#_destname2="/usr/share/backgrounds/blackcomb/"
+pkgname=blackcomb-wallpapers-git
+_pkgname=blackcomb-wallpapers
+#_destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
+_destname2="/usr/share/backgrounds/blackcomb/"
 pkgver=22.04
 pkgrel=1
 pkgdesc="Wallpapers for adk-linux"
 arch=('any')
-url="https://github.com/Technopig100/adk-wallpapers.git"
+url="https://github.com/Technopig100/blackcomb-wallpapers.git"
 license=('GPL3')
 makedepends=('git')
 provides=("${pkgname}")
@@ -19,9 +19,9 @@ package() {
 install -dm755 ${pkgdir}${_licensedir}${_pkgname}
 install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
 
-	install -dm755 ${pkgdir}${_destname1}
-	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+	#install -dm755 ${pkgdir}${_destname1}
+	#cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
 
-	#install -dm755 ${pkgdir}${_destname2}
-	#cp -r  ${srcdir}/${_pkgname}${_destnam2}* ${pkgdir}${_destname2}
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destnam2}* ${pkgdir}${_destname2}
 } 
