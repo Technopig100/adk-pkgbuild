@@ -1,5 +1,5 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-wallpapers
+pkgname=adk-wallpaper-git
 _pkgname=adk-wallpapers
 _destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
 #_destname2="/usr/share/backgrounds/blackcomb/"
@@ -12,6 +12,7 @@ license=('GPL3')
 makedepends=('git')
 provides=("${pkgname}")
 options=(!strip !emptydirs)
+replaces=(adk-wallpapers)
 source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
 sha256sums=('SKIP')
 
