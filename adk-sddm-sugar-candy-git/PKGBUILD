@@ -1,9 +1,9 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-sddm-sugar-candy
+pkgname=adk-sddm-sugar-candy-git
 _pkgname=adk-sddm-sugar-candy
 _destname1="/usr"
 _licensedir="/usr/share/adklinux/licenses/"
-pkgver=22.03
+pkgver=22.04
 pkgrel=1
 pkgdesc="Sugar Candy SDDM theme adapted for ADKLinux"
 arch=('any')
@@ -13,7 +13,7 @@ depends=('qt5-graphicaleffects' 'qt5-quickcontrols2' 'qt5-svg' 'qt5-virtualkeybo
 install=$pkgname.install
 makedepends=('git')
 options=(!strip !emptydirs)
-replaces=()
+replaces=(adk-sddm-sugar-candy)
 source=(${_pkgname}::git+$url)
 sha256sums=('SKIP')
 
