@@ -1,21 +1,23 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-mirrorlist
+pkgname=adk-mirrorlist-git
+_pkgname=adk-mirrorlist
 _destname1="/etc/pacman.d"
-pkgver=22.03
+pkgver=22.04
 pkgrel=1
-pkgdesc="Mirrorlist for adklinux"
+pkgdesc="Mirrorlist for adk-linux"
 arch=('any')
 url="https://github.com/Technopig100"
 license=('GPL3')
 makedepends=('git')
 depends=()
 conflicts=()
-provides=("${pkgname}")
+provides=("${_pkgname}")
 options=(!strip !emptydirs)
-source=(${pkgname}::"git+${url}/${pkgname}")
+replaces=(adk-mirrorlist)
+source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
 package() {
 	install -dm755 ${pkgdir}${_destname1}
-	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
 }
