@@ -1,12 +1,14 @@
 
-pkgname=adklinux-keyring
-pkgver=20230919
-pkgrel=6
+pkgname=adklinux-keyring-git
+_pkgname=adklinux-keyring
+pkgver=22.04
+pkgrel=1
 pkgdesc='AdkLinux GPG keyring'
 arch=('any')
 url='http://adklinux.info'
 license=('GPL')
-install="${pkgname}.install"
+replaces=(adklinux-keyring)
+install="${_pkgname}.install"
 source=('Makefile'
         'adklinux.gpg'
         'adklinux-revoked'
