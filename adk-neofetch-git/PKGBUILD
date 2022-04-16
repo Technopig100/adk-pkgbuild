@@ -1,14 +1,14 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-neofetch
+pkgname=adk-neofetch-git
 _pkgname=adk-neofetch
-pkgver=22.03
-pkgrel=2
+pkgver=22.04
+pkgrel=1
 pkgdesc="A CLI system information tool written in BASH that supports displaying images."
 arch=('any')
 url="https://github.com/Technopig100/${_pkgname}"
 license=('MIT')
 provides=($_pkgname)
-conflicts=($_pkgname)
+conflicts=(neofetch)
 depends=('bash')
 optdepends=(
   'feh: Wallpaper Display'
@@ -25,11 +25,12 @@ optdepends=(
   'xorg-xwininfo: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal'
 )
 makedepends=('git')
+replaces=(adk-neofetch)
 source=("$_pkgname::git+https://github.com/Technopig100/adk-neofetch")
 md5sums=('SKIP')
 
 package() {
-  cd $pkgname
+  cd $_pkgname
   make DESTDIR="$pkgdir" install
   install -D -m644 LICENSE.md "$pkgdir/usr/share/licenses/neofetch/LICENSE.md"
 }
