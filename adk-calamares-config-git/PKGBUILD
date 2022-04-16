@@ -13,6 +13,7 @@ depends=()
 conflicts=()
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
+replaces=(adk-calamares-config)
 source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
