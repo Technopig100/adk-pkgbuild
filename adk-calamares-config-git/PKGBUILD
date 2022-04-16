@@ -1,5 +1,6 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-calamares-config
+pkgname=adk-calamares-config-git
+_pkgname=adk-calamares-config
 _destname1="/etc"
 pkgver=22.04
 pkgrel=1
@@ -10,12 +11,12 @@ license=('GPL3')
 makedepends=('git')
 depends=()
 conflicts=()
-provides=("${pkgname}")
+provides=("${_pkgname}")
 options=(!strip !emptydirs)
-source=(${pkgname}::"git+${url}/${pkgname}")
+source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
 package() {
 	install -dm755 ${pkgdir}${_destname1}
-	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
 }
