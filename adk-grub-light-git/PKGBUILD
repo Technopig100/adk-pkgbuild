@@ -1,10 +1,10 @@
-## Maintainer: Jacob Durant <technopig@hotmail.com>
+# Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-light-git
 _pkgname=adk-grub-light
-pkgver=22.04
+pkgver=2022.04
 pkgrel=1
 pkgdesc='Simple light GRUB theme'
-arch=('any')
+arch=('x86_64')
 url="https://github.com/Technopig100/${_pkgname}"
 license=('GPL3')
 optdepends=('grub-customizer: GUI tool to configure GRUB')
@@ -12,6 +12,13 @@ makedepends=('git')
 replaces=(adk-grub-poly-light)
 source=("adk-light::git+https://github.com/Technopig100/adk-grub-light")
 sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
 
 package() {
   install -dm755 "${pkgdir}"/usr/share/grub/themes/
@@ -21,3 +28,4 @@ package() {
   rm "${pkgdir}"/usr/share/grub/themes/adk-light/LICENSE
   rm "${pkgdir}"/usr/share/grub/themes/adk-light/README.md
 }
+

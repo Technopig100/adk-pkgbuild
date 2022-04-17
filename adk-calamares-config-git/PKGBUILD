@@ -2,20 +2,27 @@
 pkgname=adk-calamares-config-git
 _pkgname=adk-calamares-config
 _destname1="/etc"
-pkgver=22.04
+pkgver=2022.04
 pkgrel=1
-pkgdesc="calamares for adk-linux"
-arch=('any')
+pkgdesc="Calamares configuration files for adk-linux"
+arch=('x86_64')
 url="https://github.com/Technopig100"
 license=('GPL3')
 makedepends=('git')
-depends=()
+depends=('calamares')
 conflicts=()
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
 replaces=(adk-calamares-config)
 source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
 
 package() {
 	install -dm755 ${pkgdir}${_destname1}
