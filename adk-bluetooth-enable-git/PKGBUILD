@@ -9,8 +9,11 @@ pkgdesc="Enable cups bluetooth service for ADK-Linux"
 arch=('x86_64')
 url="https://github.com/Technopig100/${_pkgname}"
 license=('GPL3')
-depends=('bluez'
-         'bluez-utils')
+depends=('pulseaudio-bluetooth' 
+         'bluez' 
+         'bluez-libs' 
+         'bluez-util' 
+         'bluedevil')
 makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
 replaces=('adk-bluetooth-enable')
 install=$_pkgname.install
