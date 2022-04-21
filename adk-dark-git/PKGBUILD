@@ -3,9 +3,9 @@
 pkgname="adk-dark-git"
 _pkgname="adk-dark"
 _destname1="/usr/share/icons/"
-_licensedir="/usr/share/adklinux/licenses/"
+_licensedir="/usr/share/licenses/"
 pkgver=2022.04
-pkgrel=1
+pkgrel=2
 pkgdesc="ADK-Dark is a mix of Flat Remix icon theme inspired by material design."
 arch=('x86_64')
 url="https://github.com/Technopig100/adk-dark"
