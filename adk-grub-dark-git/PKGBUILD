@@ -2,7 +2,7 @@
 pkgname=adk-grub-dark-git
 _pkgname=adk-grub-dark
 pkgver=2022.04
-pkgrel=1
+pkgrel=2
 pkgdesc='Simple dark GRUB theme'
 arch=('x86_64')
 url="https://github.com/Technopig100/${_pkgname}"
@@ -22,7 +22,7 @@ pkgver() {
 
 package() {
   install -dm755 "${pkgdir}"/usr/share/grub/themes/
-  install -Dm644 adk-dark/LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -Dm644 adk-dark/LICENSE "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSE"
   cp -r --no-preserve=ownership adk-dark "${pkgdir}"/usr/share/grub/themes/
   rm -rf "${pkgdir}"/usr/share/grub/themes/adk-dark/.git
   rm "${pkgdir}"/usr/share/grub/themes/adk-dark/LICENSE
