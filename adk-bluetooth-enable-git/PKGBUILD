@@ -12,7 +12,7 @@ license=('GPL3')
 depends=('pulseaudio-bluetooth' 
          'bluez' 
          'bluez-libs' 
-         'bluez-util' 
+         'bluez-utils' 
          'bluedevil')
 makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
 replaces=('adk-bluetooth-enable')
