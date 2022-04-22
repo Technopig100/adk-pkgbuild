@@ -1,25 +1,35 @@
 
 pkgname=adklinux-keyring-git
 _pkgname=adklinux-keyring
-pkgver=22.04
+pkgver=2022.04
 pkgrel=1
 pkgdesc='AdkLinux GPG keyring'
 arch=('any')
 url='http://adklinux.info'
-license=('GPL')
+_licensedir="/usr/share/licenses/"
+license=('GPL3')
 replaces=(adklinux-keyring)
 install="${_pkgname}.install"
 source=('Makefile'
         'adklinux.gpg'
         'adklinux-revoked'
-        'adklinux-trusted')
+        'adklinux-trusted'
+        'LICENSE')
 validpgpkeys=('0A74C5909A8A2600AD012AF67B22BF2F72D54DAC') # jacob
 sha256sums=('f484d69c939e6be58eb1df5c3076a301b2187f6fe399a9f8baeab2f4c26c4652'
             '5a8714ffaeea87a9323500d759f2e27f12fe2aea2c4fa79bc5e5e39e0ceeb4d9'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-            '4ec685e9f072e4674a46dac7169960b337b49983403c4d4a453612e30029b71d')
+            '4ec685e9f072e4674a46dac7169960b337b49983403c4d4a453612e30029b71d'
+            '12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0')
+
+pkgver() {
+  date +%Y.%m
+}
 
 package() {
+        install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+        install -m644  ${srcdir}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
 	cd "${srcdir}"
 	make PREFIX=/usr DESTDIR=${pkgdir} install
 }
