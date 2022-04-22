@@ -2,14 +2,15 @@
 pkgname=adk-system-installation-git
 _pkgname=adk-system-installation
 _destname1="/etc/skel/Desktop"
-pkgver=22.04
+_licensedir="/usr/share/licenses/"
+pkgver=2022.04
 pkgrel=1
 pkgdesc="System files for ADK"
 arch=('any')
 url="https://github.com/Technopig100"
 license=('GPL3')
 makedepends=('git')
-depends=()
+depends=(calamares)
 conflicts=()
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
@@ -17,7 +18,14 @@ replaces=(adk-system-installation)
 source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
+pkgver() {
+  date +%Y.%m
+}
+
 package() {
+    install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+    install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
 }
