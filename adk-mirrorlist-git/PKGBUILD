@@ -2,7 +2,8 @@
 pkgname=adk-mirrorlist-git
 _pkgname=adk-mirrorlist
 _destname1="/etc/pacman.d"
-pkgver=22.04
+_licensedir="/usr/share/licenses/"
+pkgver=2022.04
 pkgrel=1
 pkgdesc="Mirrorlist for adk-linux"
 arch=('any')
@@ -17,7 +18,14 @@ replaces=(adk-mirrorlist)
 source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
+pkgver() {
+  date +%Y.%m
+}
+
 package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+    install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
 }

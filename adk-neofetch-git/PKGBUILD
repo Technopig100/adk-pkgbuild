@@ -1,7 +1,7 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-neofetch-git
 _pkgname=adk-neofetch
-pkgver=22.04
+pkgver=2022.04
 pkgrel=1
 pkgdesc="A CLI system information tool written in BASH that supports displaying images."
 arch=('any')
@@ -29,8 +29,12 @@ replaces=(adk-neofetch)
 source=("$_pkgname::git+https://github.com/Technopig100/adk-neofetch")
 md5sums=('SKIP')
 
+pkgver() {
+  date +%Y.%m
+}
+
 package() {
   cd $_pkgname
   make DESTDIR="$pkgdir" install
-  install -D -m644 LICENSE.md "$pkgdir/usr/share/licenses/neofetch/LICENSE.md"
+  install -D -m644 LICENSE.md "$pkgdir/usr/share/licenses/adk-neofetch/LICENSE.md"
 }
