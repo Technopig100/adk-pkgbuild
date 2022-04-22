@@ -2,8 +2,8 @@
 pkgname=adk-sddm-sugar-candy-git
 _pkgname=adk-sddm-sugar-candy
 _destname1="/usr"
-_licensedir="/usr/share/adklinux/licenses/"
-pkgver=22.04
+_licensedir="/usr/share/licenses/"
+pkgver=2022.04
 pkgrel=1
 pkgdesc="Sugar Candy SDDM theme adapted for ADKLinux"
 arch=('any')
@@ -16,6 +16,10 @@ options=(!strip !emptydirs)
 replaces=(adk-sddm-sugar-candy)
 source=(${_pkgname}::git+$url)
 sha256sums=('SKIP')
+
+pkgver() {
+  date +%Y.%m
+}
 
 package() {
   install -dm755 ${pkgdir}${_licensedir}${_pkgname}
