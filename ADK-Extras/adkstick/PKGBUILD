@@ -1,12 +1,14 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 
-pkgname=adkstick
-pkgver=1.1
-pkgrel=2
+pkgname=adkstick-git
+_pkgname=adkstick
+_licensedir="/usr/share/licenses/"
+pkgver=2022.04
+pkgrel=1
 pkgdesc='A GUI to write .img or .iso files to a USB Key. It can also format them'
 arch=('any')
 url="https://github.com/Technopig100"
-license=(GPL)
+license=(GPL3)
 depends=(
     coreutils
     desktop-file-utils
@@ -26,20 +28,24 @@ depends=(
     python-xapp
     udisks2
     util-linux
-    xapps
-)
+    xapps)
 makedepends=(
-    gettext
-)
+    gettext)
 conflicts=(
     mintstick-git
-    mintstick
-)
-source=(${pkgname}::"git+${url}/${pkgname}")
+    mintstick)
+source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
 prepare() {
-  cd ${pkgname}
+  cd ${_pkgname}
 
   ## File "install.sh" was not updated to match the new filenames. For now, this is added
   sed -i 's|org.linuxmint.im|com.linuxmint.adkstick|g' install.sh
@@ -53,7 +59,9 @@ prepare() {
 }
 
 package() {
-  cd ${pkgname}
+  install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+  install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+  cd ${_pkgname}
 
   ## Creating the directories to copy the files
   install -d "$pkgdir/usr/bin"
