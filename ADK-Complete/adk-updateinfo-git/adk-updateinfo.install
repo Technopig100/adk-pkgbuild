@@ -1,0 +1,14 @@
+post_install() {
+  echo
+  tput setaf 1
+  echo "[You Have News!]"
+  echo
+  tput setaf 2
+  echo "Simply type the alias 'News' in your terminal"
+  tput sgr0
+  echo
+}
+
+post_upgrade() {
+  post_install
+} 
