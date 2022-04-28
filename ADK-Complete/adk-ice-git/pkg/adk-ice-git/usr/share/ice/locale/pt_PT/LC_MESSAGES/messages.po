@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-16 18:55+0100\n"
+"PO-Revision-Date: 2020-08-04 11:04-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt_PT\n"
+
+#: ../../../bin/ice:233 ../../../bin/ice:660
+msgid "Accessories"
+msgstr "Acessórios"
+
+#: ../../../bin/ice:233 ../../../bin/ice:662
+msgid "Games"
+msgstr "Jogos"
+
+#: ../../../bin/ice:234 ../../../bin/ice:664
+msgid "Graphics"
+msgstr "Gráficos"
+
+#: ../../../bin/ice:234 ../../../bin/ice:666
+msgid "Internet"
+msgstr "Internet"
+
+#: ../../../bin/ice:235 ../../../bin/ice:669
+msgid "Office"
+msgstr "Produtividade"
+
+#: ../../../bin/ice:235 ../../../bin/ice:670
+msgid "Programming"
+msgstr "Desenvolvimento"
+
+#: ../../../bin/ice:236 ../../../bin/ice:672
+msgid "Multimedia"
+msgstr "Multimídia"
+
+#: ../../../bin/ice:236 ../../../bin/ice:674
+msgid "System"
+msgstr "Ferramentas de sistema"
+
+#: ../../../bin/ice:267
+msgid "ERROR: An unknown browser selection error has occurred."
+msgstr "ERRO: ocorreu uma seleção de navegador desconhecido."
+
+#: ../../../bin/ice:73
+msgid "Please choose an icon."
+msgstr "Por favor, selecione um ícone."
+
+#: ../../../bin/ice:442
+msgid "Browser Error"
+msgstr "Erro de navegador"
+
+#: ../../../bin/ice:449
+msgid "<b>Warning: No Suitable Browser Detected</b>"
+msgstr "<b>Atenção: Nenhum navegador adequado foi detectado</b>"
+
+#: ../../../bin/ice:450 ../../../bin/ice:501
+msgid ""
+"The name of the SSB will cause an existing SSB to\n"
+"be overwritten. To prevent this, change a letter in\n"
+"the name. Continue anyway?"
+msgstr ""
+"O nome do SSB apagará um SSB existente.\n"
+"Para manter o SSB existente, mude alguma letra no nome.\n"
+"Continuar mesmo assim?"
+
+#: ../../../bin/ice:137
+msgid "Close"
+msgstr "Fechar"
+
+#: ../../../bin/ice:495
+msgid "Duplication Error"
+msgstr "Erro de duplicação"
+
+#: ../../../bin/ice:500
+msgid "<b>Warning: File Duplication Error</b>"
+msgstr "<b>Atenção: Erro de duplicação de arquivo</b>"
+
+#: ../../../bin/ice:179
+msgid "OK"
+msgstr "OK"
+
+#: ../../../bin/ice:181
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../../../bin/ice:627
+msgid "Address Error"
+msgstr "Erro de endereço"
+
+#: ../../../bin/ice:628
+msgid "Error: HTTP or URL Error"
+msgstr ""
+
+#: ../../../bin/ice:629
+msgid ""
+"An error with the web address has been detected.\n"
+"This is possibly the site being down or unavailable right now.\n"
+"Please check the URL"
+msgstr ""
+
+#: ../../../bin/ice:639
+msgid "Error Applying SSB"
+msgstr ""
+
+#: ../../../bin/ice:640
+msgid "Error: Unknown Error"
+msgstr ""
+
+#: ../../../bin/ice:6
+msgid "An unknown error has occurred. :("
+msgstr "Ocorreu um erro desconhecido. :("
+
+#: ../../../bin/ice:167
+msgid "<b>Warning: HTTP or URL Error</b>"
+msgstr "<b>Atenção: Erro de HTTP ou de URL</b>"
+
+#: ../../../bin/ice:172
+msgid ""
+"An error with the web address has been detected.\n"
+"This is possibly the site being down or unavailable right now.\n"
+"Continue anyway?"
+msgstr ""
+"Foi detectado um erro com o endereço de web.\n"
+"Isso pode acontecer pelo site estar offline ou\n"
+"indisponível no momento.\n"
+"Continuar mesmo assim?"
+
+#: ../../../bin/ice:572
+msgid "Name Error"
+msgstr "Erro de nome"
+
+#: ../../../bin/ice:577
+msgid "<b>Error: No Application Name Entered.</b>"
+msgstr "<b>Erro: Nenhum nome de aplicativo inserido.</b>"
+
+#: ../../../bin/ice:578
+msgid "Please enter an application name to continue."
+msgstr "Insira um nome de aplicativo para continuar."
+
+#: ../../../bin/ice:612
+msgid "ERROR: An address error has occurred."
+msgstr "ERRO: Ocorreu um erro de endereço."
+
+#: ../../../bin/ice:615
+msgid "ERROR: An unknown error has occurred."
+msgstr "ERRO: Ocorreu um erro desconhecido."
+
+#: ../../../bin/ice:229
+msgid "Name the application"
+msgstr "Nome para o aplicativo"
+
+#: ../../../bin/ice:231
+msgid "Enter web address"
+msgstr "Digite o endereço da web"
+
+#: ../../../bin/ice:238
+msgid "Where in the menu?"
+msgstr "Aonde no menu?"
+
+#: ../../../bin/ice:252
+msgid "Select an icon"
+msgstr "Escolher um ícone"
+
+#: ../../../bin/ice:254 ../../../bin/ice:646
+msgid "Use site favicon"
+msgstr "Usar o favicon da página"
+
+#: ../../../bin/ice:550
+msgid "Downloading favicon"
+msgstr ""
+
+#: ../../../bin/ice:366 ../../../bin/ice:456
+msgid "Apply"
+msgstr "Aplique"
+
+#: ../../../bin/ice:452
+msgid "Applying"
+msgstr ""
+
+#: ../../../bin/ice:396 ../../../bin/ice:426
+msgid "Create"
+msgstr "Criar"
+
+#: ../../../bin/ice:427
+msgid "Remove"
+msgstr "Remover"
+
+#. ./../../bin/ice:259 ../../../bin/ice:921
+msgid "Isolate the SSB"
+msgstr ""
+
+#. ./../../bin/ice:360 ../../../bin/ice:924
+msgid "Firefox is always isolated"
+msgstr ""
+
+#. ./../../bin/ice:363 ../../../bin/ice:927
+msgid "GNOME Web is always isolated"
+msgstr ""

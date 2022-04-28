@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-16 18:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: ../../../bin/ice:233 ../../../bin/ice:660
+msgid "Accessories"
+msgstr ""
+
+#: ../../../bin/ice:233 ../../../bin/ice:662
+msgid "Games"
+msgstr ""
+
+#: ../../../bin/ice:234 ../../../bin/ice:664
+msgid "Graphics"
+msgstr ""
+
+#: ../../../bin/ice:234 ../../../bin/ice:666
+msgid "Internet"
+msgstr ""
+
+#: ../../../bin/ice:235 ../../../bin/ice:669
+msgid "Office"
+msgstr ""
+
+#: ../../../bin/ice:235 ../../../bin/ice:670
+msgid "Programming"
+msgstr ""
+
+#: ../../../bin/ice:236 ../../../bin/ice:672
+msgid "Multimedia"
+msgstr ""
+
+#: ../../../bin/ice:236 ../../../bin/ice:674
+msgid "System"
+msgstr ""
+
+#: ../../../bin/ice:267
+msgid "ERROR: An unknown browser selection error has occurred."
+msgstr ""
+
+#: ../../../bin/ice:73
+msgid "Please choose an icon."
+msgstr ""
+
+#: ../../../bin/ice:442
+msgid "Browser Error"
+msgstr ""
+
+#: ../../../bin/ice:449
+msgid "<b>Warning: No Suitable Browser Detected</b>"
+msgstr ""
+
+#: ../../../bin/ice:450 ../../../bin/ice:501
+msgid "The name of the SSB will cause an existing SSB to\n"
+"be overwritten. To prevent this, change a letter in\n"
+"the name. Continue anyway?"
+msgstr ""
+
+#: ../../../bin/ice:137
+msgid "Close"
+msgstr ""
+
+#: ../../../bin/ice:495
+msgid "Duplication Error"
+msgstr ""
+
+#: ../../../bin/ice:500
+msgid "<b>Warning: File Duplication Error</b>"
+msgstr ""
+
+#: ../../../bin/ice:179
+msgid "OK"
+msgstr ""
+
+#: ../../../bin/ice:181
+msgid "Cancel"
+msgstr ""
+
+#: ../../../bin/ice:627
+msgid "Address Error"
+msgstr ""
+
+#: ../../../bin/ice:628
+msgid "Error: HTTP or URL Error"
+msgstr ""
+
+#: ../../../bin/ice:629
+msgid "An error with the web address has been detected.\n"
+"This is possibly the site being down or"
+" unavailable right now.\n"
+"Please check the URL"
+msgstr ""
+
+#: ../../../bin/ice:639
+msgid "Error Applying SSB"
+msgstr ""
+
+#: ../../../bin/ice:640
+msgid "Error: Unknown Error"
+msgstr ""
+
+#: ../../../bin/ice:6
+msgid "An unknown error has occurred. :("
+msgstr ""
+
+#: ../../../bin/ice:167
+msgid "<b>Warning: HTTP or URL Error</b>"
+msgstr ""
+
+#: ../../../bin/ice:172
+msgid "An error with the web address has been detected.\n"
+"This is possibly the site being down or "
+"unavailable right now.\nContinue anyway?"
+msgstr ""
+
+#: ../../../bin/ice:572
+msgid "Name Error"
+msgstr ""
+
+#: ../../../bin/ice:577
+msgid "<b>Error: No Application Name Entered.</b>"
+msgstr ""
+
+#: ../../../bin/ice:578
+msgid "Please enter an application name to continue."
+msgstr ""
+
+#: ../../../bin/ice:612
+msgid "ERROR: An address error has occurred."
+msgstr ""
+
+#: ../../../bin/ice:615
+msgid "ERROR: An unknown error has occurred."
+msgstr ""
+
+#: ../../../bin/ice:229
+msgid "Name the application"
+msgstr ""
+
+#: ../../../bin/ice:231
+msgid "Enter web address"
+msgstr ""
+
+#: ../../../bin/ice:238
+msgid "Where in the menu?"
+msgstr ""
+
+#: ../../../bin/ice:252
+msgid "Select an icon"
+msgstr ""
+
+#: ../../../bin/ice:254 ../../../bin/ice:646
+msgid "Use site favicon"
+msgstr ""
+
+#: ../../../bin/ice:550
+msgid "Downloading favicon"
+msgstr ""
+
+#: ../../../bin/ice:366 ../../../bin/ice:456
+msgid "Apply"
+msgstr ""
+
+#: ../../../bin/ice:452
+msgid "Applying"
+msgstr ""
+
+#: ../../../bin/ice:396 ../../../bin/ice:426
+msgid "Create"
+msgstr ""
+
+#: ../../../bin/ice:427
+msgid "Remove"
+msgstr ""
+
+#../../../bin/ice:259 ../../../bin/ice:921
+msgid "Isolate the SSB"
+msgstr ""
+
+#../../../bin/ice:360 ../../../bin/ice:924
+msgid "Firefox is always isolated"
+msgstr ""
+
+#../../../bin/ice:363 ../../../bin/ice:927
+msgid "GNOME Web is always isolated"
+msgstr ""
