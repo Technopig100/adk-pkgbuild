@@ -2,7 +2,7 @@
 pkgname=adk-scantool-git
 _pkgname=adk-scantool
 _licensedir="/usr/share/licenses/"
-pkgver=2022.04
+pkgver=2022.05
 pkgrel=1
 pkgdesc="OBD-II vehicle diagnostic scanner"
 arch=('x86_64')
