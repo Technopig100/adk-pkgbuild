@@ -4,8 +4,9 @@ _pkgname=adklinux-iso-config
 _destname1="/etc/"
 _destname2="/etc/pacman.d/hooks/"
 _destname3="/usr/lib/"
+_destname4="/etc/xdg/"
 pkgver=2022.05
-pkgrel=3
+pkgrel=4
 pkgdesc="AdkLinux Plasma Desktop Settings"
 arch=('x86_64')
 url="https://github.com/Technopig100/adklinux-plasma"
@@ -41,4 +42,7 @@ package() {
 
 	install -dm755 ${pkgdir}${_destname3}
 	 cp -r  ${srcdir}/${_pkgname}${_destname3}adk-release ${pkgdir}${_destname3}
+
+	install -dm755 ${pkgdir}${_destname4}
+	cp -r  ${srcdir}/${_pkgname}${_destname4}* ${pkgdir}${_destname4}
 }

@@ -3,7 +3,6 @@ pkgname=adklinux-plasma-git
 _pkgname=adklinux-plasma
 _destname1="/etc/skel/.config/"
 _destname2="/etc/skel/.local/share/"
-#_destname3="/etc/xdg/"
 _destname4="/etc/skel/"
 _licensedir="/usr/share/licenses/"
 pkgver=2022.05
@@ -35,10 +34,7 @@ package() {
 
 	install -dm755 ${pkgdir}${_destname2}
 	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
-
-	#install -dm755 ${pkgdir}${_destname3}
-	#cp -r  ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}
-    
+  
  	cp -r  ${srcdir}/${_pkgname}${_destname4}.face ${pkgdir}${_destname4}
 
 	cp -r  ${srcdir}/${_pkgname}${_destname4}.face.icon ${pkgdir}${_destname4}
