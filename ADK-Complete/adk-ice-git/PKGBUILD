@@ -2,7 +2,7 @@
 pkgname=adk-ice-git # '-bzr', '-git', '-hg' or '-svn'
 _pkgname=adk-ice
 _destname1="usr"
-pkgver=2022.04
+pkgver=2022.05
 pkgrel=1
 _licensedir="/usr/share/licenses/"
 pkgdesc="Enable cups printer service for ADK-Linux"
