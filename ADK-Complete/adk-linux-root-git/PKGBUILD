@@ -1,0 +1,30 @@
+# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+pkgname=arcolinux-root-git
+_pkgname=arcolinux-root
+_destname1="/etc/skel/"
+_licensedir="/usr/share/licenses/"
+pkgver=22.09
+pkgrel=01
+pkgdesc="root configs from adk-linux"
+arch=('any')
+url="https://github.com/Technopig100/adk-linux-root"
+license=('GPL3')
+makedepends=('git' 'most')
+depends=('bash')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}.bashrc-latest ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}.face ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}.face.icon ${pkgdir}${_destname1}
+
+
+}
+ 
