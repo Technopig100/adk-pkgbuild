@@ -2,8 +2,8 @@
 pkgname=adk-updateinfo-git # '-bzr', '-git', '-hg' or '-svn'
 _pkgname=adk-updateinfo
 _destname1="etc"
-pkgver=2022.05
-pkgrel=1
+pkgver=2022.09
+pkgrel=2
 _licensedir="/usr/share/licenses/"
 pkgdesc="Provides news and info about ADK-Linux"
 arch=('x86_64')
