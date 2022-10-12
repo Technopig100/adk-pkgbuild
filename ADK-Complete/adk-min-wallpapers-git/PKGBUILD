@@ -1,10 +1,10 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-wallpaper-git
-_pkgname=adk-wallpapers
-_destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
+pkgname=adk-min-wallpaper-git
+_pkgname=adk-min-wallpapers
+_destname1="/usr/share/wallpapers/adk-min-linux-wallpaper/"
 _licensedir="/usr/share/licenses/"
 pkgver=2022.10
-pkgrel=1
+pkgrel=2
 pkgdesc="Wallpapers for adk-linux"
 arch=('any')
 url="https://github.com/Technopig100/adk-wallpapers.git"
