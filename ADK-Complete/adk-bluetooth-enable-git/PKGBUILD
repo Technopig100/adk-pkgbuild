@@ -2,7 +2,7 @@
 pkgname=adk-bluetooth-enable-git # '-bzr', '-git', '-hg' or '-svn'
 _pkgname=adk-bluetooth-enable
 _destname1="etc"
-pkgver=2022.05
+pkgver=2022.10
 pkgrel=1
 _licensedir="/usr/share/licenses/"
 pkgdesc="Enable cups bluetooth service for ADK-Linux"
