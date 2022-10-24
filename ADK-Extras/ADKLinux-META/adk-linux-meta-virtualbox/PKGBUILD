@@ -1,0 +1,18 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-linux-meta-virtualbox
+pkgver=22.10
+pkgrel=02
+pkgdesc="Installs applications Virtualbox"
+arch=('any')
+url="https://wiki.archlinux.org/title/VirtualBox"
+license=('MIT' 'GPL3')
+provides=("${pkgname}")
+conflicts=()
+options=(!strip !emptydirs)
+install='readme.install'
+depends=(
+'virtualbox'
+'virtualbox-ext-oracle'
+'virtualbox-guest-iso'
+)
+
