@@ -1,0 +1,29 @@
+msg() {
+    ALL_OFF="\e[1;0m"
+    BOLD="\e[1;1m"
+    GREEN="${BOLD}\e[1;32m"
+	local mesg=$1; shift
+	printf "${GREEN}==>${ALL_OFF}${BOLD} ${mesg}${ALL_OFF}" "$@" >&2
+}
+
+post_install() {
+  #avahi services
+    msg "Disabling Dhcpd and enabling NetworkManager services..."
+    echo
+  ! systemctl is-enabled dhcpcd >/dev/null || systemctl disable dhcpcd
+  systemctl is-active NetworkManager >/dev/null || systemctl enable NetworkManager
+    msg "Enabling avahi services..."
+    echo
+  systemctl is-active avahi-daemon >/dev/null || systemctl enable avahi-daemon
+  	msg "Editing nsswitch.conf..."
+    echo
+  sudo sed -i_bkp 's/mymachines resolve/mymachines mdns_minimal [NOTFOUND=return] resolve/g' /etc/nsswitch.conf
+}
+
+post_remove() {
+    msg "Disabling Avahi services..."
+    echo
+  ! systemctl is-enabled avahi-daemon >/dev/null || systemctl disable avahi-daemon
+    msg "Avahi services should now be disabled. Reboot your system."
+    echo
+}
