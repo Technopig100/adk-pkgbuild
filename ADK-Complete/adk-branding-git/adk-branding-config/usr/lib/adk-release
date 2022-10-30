@@ -1,0 +1,13 @@
+NAME="ADK-Linux"
+PRETTY_NAME="ADK-Linux"
+ID="ADK-Linux"
+BUILD_ID="rolling"
+ANSI_COLOR="33;35"
+HOME_URL="https://technopig100.github.io/Home/"
+DOCUMENTATION_URL="https://technopig100.github.io/Home/"
+SUPPORT_URL="https://technopig100.github.io/Home/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+LOGO=distributor-logo-adklinux.svg
+IMAGE_ID=adklinux
+IMAGE_VERSION=2022.10 
+LogoPath=/etc/xdg/adk-linux/distributor-logo-adklinux.svg

@@ -1,0 +1,48 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-branding-config-git
+_pkgname=adk-branding-config
+_destname1="/etc/"
+_destname2="/usr/share/libalpm/hooks/"
+_destname3="/usr/lib/"
+_destname4="/etc/xdg/"
+pkgver=2022.10
+pkgrel=1
+pkgdesc="AdkLinux ISO Branding"
+arch=('x86_64')
+url="https://github.com/Technopig100/adklinux-iso-config"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=('adklinux-iso-config-git')
+provides=("${pkgname}")
+_licensedir="/usr/share/licenses/"
+install=$_pkgname.install
+options=(!strip !emptydirs)
+source=(url/${_pkgname}.tar.gz)
+sha256sums=('SKIP')
+#install='readme.install'
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+  install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+  install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	 cp -r  ${srcdir}/${_pkgname}${_destname1}adk-release ${pkgdir}${_destname1}
+
+	install -dm755 ${pkgdir}${_destname2}
+	 cp -r  ${srcdir}/${_pkgname}${_destname2}lsb-release.hook ${pkgdir}${_destname2}
+ 	 cp -r  ${srcdir}/${_pkgname}${_destname2}os-release.hook ${pkgdir}${_destname2}
+ 	 
+	install -dm755 ${pkgdir}${_destname3}
+	 cp -r  ${srcdir}/${_pkgname}${_destname3}adk-release ${pkgdir}${_destname3}
+
+	install -dm755 ${pkgdir}${_destname4}
+	cp -r  ${srcdir}/${_pkgname}${_destname4}* ${pkgdir}${_destname4}
+}
