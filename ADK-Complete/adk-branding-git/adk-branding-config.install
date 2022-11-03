@@ -5,7 +5,7 @@ post_install() {
   cp /usr/lib/adk-release /usr/lib/os-release
   echo
   tput setaf 2
-  echo "[ADK-Linux go brrrrr!!]"
+  echo "[ADK-Linux go vrrrrooom!!]"
   echo
   tput sgr0
   echo
