@@ -1,14 +1,15 @@
 
-pkgname=adklinux-keyring-git
-_pkgname=adklinux-keyring
-pkgver=2022.05
+pkgname=adk-linux-keyring-git
+_pkgname=adk-linux-keyring
+pkgver=2022.11
 pkgrel=1
 pkgdesc='AdkLinux GPG keyring'
 arch=('any')
 url='http://adklinux.info'
 _licensedir="/usr/share/licenses/"
 license=('GPL3')
-replaces=(adklinux-keyring)
+replaces=('adklinux-keyring-git')
+conflicts=('adklinux-keyring-git')
 install="${_pkgname}.install"
 source=('Makefile'
         'adklinux.gpg'

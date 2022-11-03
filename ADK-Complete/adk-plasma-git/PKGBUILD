@@ -1,22 +1,23 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adklinux-plasma-git
-_pkgname=adklinux-plasma
+pkgname=adk-plasma-git
+_pkgname=adk-plasma
 _destname1="/etc/skel/.config/"
 _destname2="/etc/skel/.local/share/"
 _destname4="/etc/skel/"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.10
-pkgrel=20
+pkgver=2022.11
+pkgrel=2
 pkgdesc="AdkLinux Plasma Desktop Settings"
 arch=('any')
-url="https://github.com/Technopig100/adklinux-plasma"
+url="https://github.com/Technopig100/adk-plasma"
 license=('GPL3')
 makedepends=('git')
 depends=('kinit'
 	     'plasma-framework')
-conflicts=('adklinux-plasma-nemesis-git')
 provides=("${pkgname}")
 options=(!strip !emptydirs)
+conflicts=('adklinux-plasma-git' 'adk-min-plasma-git')
+replaces=(adklinux-plasma-git)
 source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
 sha256sums=('SKIP')
 install='readme.install'
