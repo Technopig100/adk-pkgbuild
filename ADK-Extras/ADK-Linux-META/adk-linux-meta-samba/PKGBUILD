@@ -1,20 +1,19 @@
 # Maintainer: Erik Dubois erik.dubois@gmail.com
 
 pkgname=adk-linux-meta-samba
-pkgver=22.10
-pkgrel=02
+pkgver=22.11
+pkgrel=1
 arch=('any')
 url="https://wiki.archlinux.org/title/Samba"
 license=('GPL')
 backup=('etc/samba/smb.conf')
 pkgdesc="Meta package for samba support."
 depends=("samba" "avahi" "nss-mdns" "gvfs-smb")
-optdepends=('nemo-share: Sharing a folder via Nemo'
-			'nautilus-share: Sharing a folder via Nautilus'
-			'caja-share: Sharing a folder via Caja'
-			'kdenetwork-filesharing: Sharing a folder via Dolphin'
-			'thunar-shares-plugin: Sharing a folder via Thunar'
-			'system-config-samba: The Samba configuration tool by Red Hat')
+optdepends=('kdenetwork-filesharing: Sharing a folder via Dolphin'
+	'nemo-share: Sharing a folder via Nemo'
+	'nautilus-share: Sharing a folder via Nautilus'
+	'caja-share: Sharing a folder via Caja'
+	'thunar-shares-plugin: Sharing a folder via Thunar')
 install=samba.install
 source=('smb.conf.adklinux')
 md5sums=('e13bb0a0d13bc2762dcf059f02433bf2')
