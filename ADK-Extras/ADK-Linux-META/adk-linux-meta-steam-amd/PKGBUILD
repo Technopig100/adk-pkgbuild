@@ -1,7 +1,7 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-linux-meta-steam-amd
-pkgver=22.10
-pkgrel=02
+pkgver=22.11
+pkgrel=2
 pkgdesc="Installs Steam on ADKLinux for AMD"
 arch=('any')
 url="https://wiki.archlinux.org/title/Steam"
@@ -10,7 +10,8 @@ provides=("${pkgname}")
 conflicts=()
 options=(!strip !emptydirs)
 install='readme.install'
-optdepends=(
+depends=(
+'steam'
 'lib32-libva'
 'lib32-libxtst'
 'lib32-libxrandr'
@@ -32,4 +33,4 @@ optdepends=(
 'ttf-ms-fonts'
 'vulkan-tools'
 'proton-ge-custom')
-depends=('steam')
+
