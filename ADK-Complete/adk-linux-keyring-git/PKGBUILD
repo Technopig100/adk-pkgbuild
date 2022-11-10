@@ -2,8 +2,8 @@
 pkgname=adk-linux-keyring-git
 _pkgname=adk-linux-keyring
 pkgver=2022.11
-pkgrel=1
-pkgdesc='AdkLinux GPG keyring'
+pkgrel=2
+pkgdesc='Adk-Linux GPG keyring'
 arch=('any')
 url='http://adklinux.info'
 _licensedir="/usr/share/licenses/"

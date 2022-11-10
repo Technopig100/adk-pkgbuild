@@ -1,11 +1,11 @@
-# Maintainer: Erik Dubois <erik.dubois@gmail.com>
+# Maintainer: Jacob <technopig@hotmail.com>
 pkgname=adk-linux-root-git
 _pkgname=adk-linux-root
 _destname1="/etc/skel/"
 _licensedir="/usr/share/licenses/"
 pkgver=2022.11
-pkgrel=2
-pkgdesc="Root bash configs from adk-linux"
+pkgrel=3
+pkgdesc="Root bashrc.conf from ADK-Linux"
 arch=('any')
 url="https://github.com/Technopig100/adk-linux-root"
 license=('GPL3')

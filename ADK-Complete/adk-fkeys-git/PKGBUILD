@@ -1,20 +1,23 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
-pkgname=adk-calamares-config-git
-_pkgname=adk-calamares-config
-_destname1="/etc"
+pkgname=adk-fkeys-git
+_pkgname=adk-fkeys
+_destname1="/usr/bin"
+_destname2="/usr/share"
+_destname3=
+_destname4=
+_destname5=
 pkgver=2022.11
-pkgrel=3
-pkgdesc="Calamares configuration files for ADK-Linux"
+pkgrel=1
+pkgdesc="A Bash Script to refresh Pacman-keys and Databases"
 arch=('x86_64')
-url="https://github.com/Technopig100"
+url="https://wiki.archlinux.org/title/DeveloperWiki:Package_Signing_Proposal_for_Pacman#Pacman's_keyring"
 license=('GPL3')
 makedepends=('git')
 depends=()
-conflicts=(adk-min-calamares-config-git)
+conflicts=()
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
-replaces=(adk-calamares-config)
-source=(${_pkgname}::"git+${url}/${_pkgname}")
+source=("git+https://github.com/Technopig100/adk-fkeys.git")
 sha256sums=('SKIP')
 
 # Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
@@ -27,4 +30,7 @@ pkgver() {
 package() {
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r ${srcdir}/${_pkgname}${_destname2}/* ${pkgdir}${_destname2}
 }
+
