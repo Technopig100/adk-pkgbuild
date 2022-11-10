@@ -2,8 +2,8 @@
 pkgname=adk-calamares-config-git
 _pkgname=adk-calamares-config
 _destname1="/etc"
-pkgver=2022.10
-pkgrel=06
+pkgver=2022.11
+pkgrel=2
 pkgdesc="Calamares configuration files for adk-linux"
 arch=('x86_64')
 url="https://github.com/Technopig100"

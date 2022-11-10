@@ -1,7 +1,7 @@
 ## Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-neofetch-git
 _pkgname=adk-neofetch
-pkgver=2022.09
+pkgver=2022.11
 pkgrel=1
 pkgdesc="A CLI system information tool written in BASH that supports displaying images."
 arch=('any')

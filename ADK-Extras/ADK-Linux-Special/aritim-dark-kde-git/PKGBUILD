@@ -2,7 +2,7 @@
 ## Contributor: Bradley Ridnour <bradley@ridnour.net>
 pkgname=aritim-dark-kde-git
 _pkgname=Aritim-Dark
-pkgver=r117.99cd330
+pkgver=r118.b53c45e
 pkgrel=1
 pkgdesc="A Dark theme for KDE based DEs, deeply inspired by the Ayu Dark color palette."
 arch=(any)

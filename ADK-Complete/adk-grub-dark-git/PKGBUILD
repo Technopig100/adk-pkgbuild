@@ -1,7 +1,7 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-dark-git
 _pkgname=adk-grub-dark
-pkgver=2022.05
+pkgver=2022.11
 pkgrel=1
 pkgdesc='Simple dark GRUB theme'
 arch=('x86_64')

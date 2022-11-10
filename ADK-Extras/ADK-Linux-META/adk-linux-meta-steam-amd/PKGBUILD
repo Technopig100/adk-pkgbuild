@@ -1,8 +1,8 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-linux-meta-steam-amd
-pkgver=22.11
-pkgrel=2
-pkgdesc="Installs Steam on ADKLinux for AMD"
+pkgver=2022.11
+pkgrel=1
+pkgdesc="Installs Steam on ADK-Linux for AMD"
 arch=('any')
 url="https://wiki.archlinux.org/title/Steam"
 license=('MIT' 'GPL3')
@@ -31,6 +31,5 @@ depends=(
 'lib32-libdbusmenu-gtk2'
 'lib32-nss'
 'ttf-ms-fonts'
-'vulkan-tools'
-'proton-ge-custom')
+'vulkan-tools')
 

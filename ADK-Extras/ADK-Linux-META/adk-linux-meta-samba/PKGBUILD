@@ -1,7 +1,7 @@
-# Maintainer: Erik Dubois erik.dubois@gmail.com
+# Maintainer: Jacob Durant <technopig@hotmail.com>
 
 pkgname=adk-linux-meta-samba
-pkgver=22.11
+pkgver=2022.11
 pkgrel=1
 arch=('any')
 url="https://wiki.archlinux.org/title/Samba"

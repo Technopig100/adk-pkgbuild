@@ -2,18 +2,18 @@
 pkgname=adk-min-calamares-config-git
 _pkgname=adk-min-calamares-config
 _destname1="/etc"
-pkgver=2022.10
-pkgrel=5
+pkgver=2022.11
+pkgrel=2
 pkgdesc="Calamares configuration files for adk-linux"
 arch=('x86_64')
 url="https://github.com/Technopig100"
 license=('GPL3')
 makedepends=('git')
 depends=()
-conflicts=()
+conflicts=(adk-calamares-config-git)
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
-replaces=(adk-calamares-config)
+replaces=()
 source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 

@@ -1,8 +1,8 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 
 pkgname=adk-linux-meta-netdisc
-pkgver=22.10
-pkgrel=02
+pkgver=2022.11
+pkgrel=1
 arch=('any')
 url="https://wiki.archlinux.org/title/Avahi"
 license=('GPL')
