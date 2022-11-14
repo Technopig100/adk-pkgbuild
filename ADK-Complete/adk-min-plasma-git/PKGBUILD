@@ -6,7 +6,7 @@ _destname2="/etc/skel/.local/share/"
 _destname4="/etc/skel/"
 _licensedir="/usr/share/licenses/"
 pkgver=2022.11
-pkgrel=3
+pkgrel=6
 pkgdesc="ADK-Linux Plasma Desktop Settings"
 arch=('any')
 url="https://github.com/Technopig100/adk-min-plasma"
@@ -14,7 +14,8 @@ license=('GPL3')
 makedepends=('git')
 depends=('kinit'
 	     'plasma-framework')
-conflicts=('adklinux-plasma-git')
+conflicts=('adk-linux-plasma-git'
+	     'adk-stable-plasma-git')
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")

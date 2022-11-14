@@ -1,10 +1,11 @@
 # Maintainer: Jacob <technopig@hotmail.com>
 pkgname=adk-linux-root-git
 _pkgname=adk-linux-root
-_destname1="/etc/skel/"
+_destname1="/etc/skel"
+_destname2="/etc/xdg"
 _licensedir="/usr/share/licenses/"
 pkgver=2022.11
-pkgrel=3
+pkgrel=5
 pkgdesc="Root bashrc.conf from ADK-Linux"
 arch=('any')
 url="https://github.com/Technopig100/adk-linux-root"
@@ -21,7 +22,10 @@ package() {
 	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
 
 	install -dm755 ${pkgdir}${_destname1}
-	cp -r  ${srcdir}/${_pkgname}${_destname1}.bashrc-latest ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}/.bashrc-latest ${pkgdir}${_destname1}
+
+		install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destname2}/.bashrc-latest ${pkgdir}${_destname2}
 
 }
  

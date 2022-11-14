@@ -1,0 +1,8 @@
+-I/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/coretime-v4.4.0/src
+-I/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/coretime-v4.4.0
+-I/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build
+-DVERSION_TEXT="4.4.0"
+-DAUDIO_RESOURCE_FOLDER="/usr/share/coreapps/resource/"
+-o
+/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/src/moc_coretime.cpp
+/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/coretime-v4.4.0/src/coretime.h

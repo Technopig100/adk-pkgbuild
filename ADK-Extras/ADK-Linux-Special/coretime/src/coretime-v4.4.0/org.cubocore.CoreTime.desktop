@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=CoreTime
+Comment=A time related task manager for C Suite.
+TryExec=/usr/bin/coretime
+Exec=coretime
+Icon=org.cubocore.CoreTime
+Type=Application
+Categories=Qt;Utility;X-CSuite;
+Terminal=false
+StartupNotify=true
