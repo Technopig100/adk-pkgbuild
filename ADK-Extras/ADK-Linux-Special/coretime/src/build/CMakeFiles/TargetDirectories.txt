@@ -1,9 +1,0 @@
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/coretime.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/edit_cache.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/rebuild_cache.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/list_install_components.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/install.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/install/local.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/install/strip.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/coretime_autogen_timestamp_deps.dir
-/mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Extras/ADK-Linux-Special/coretime/src/build/CMakeFiles/coretime_autogen.dir
