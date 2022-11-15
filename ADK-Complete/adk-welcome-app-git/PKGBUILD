@@ -1,0 +1,39 @@
+## Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-welcome-app-git
+_pkgname=adk-welcome-app
+_destname1="/usr/local/bin"
+_destname2="/usr/local"
+_destname3="/usr/share"
+_destname4=
+_destname5=
+pkgver=2022.11
+pkgrel=1
+pkgdesc="ADK-Linux Welcome App"
+arch=('x86_64')
+url="https://wiki.archlinux.org/title/DeveloperWiki:Package_Signing_Proposal_for_Pacman#Pacman's_keyring"
+license=('GPL3')
+makedepends=('git')
+depends=('yad' 
+	       'konsole')
+conflicts=(adk-fkeys-git)
+provides=("${_pkgname}")
+options=(!strip !emptydirs)
+source=("git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r ${srcdir}/${_pkgname}${_destname2}/* ${pkgdir}${_destname2}
+	install -dm755 ${pkgdir}${_destname3}
+	cp -r ${srcdir}/${_pkgname}${_destname3}/* ${pkgdir}${_destname3}
+}
+
