@@ -1,0 +1,24 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+
+pkgname=adk-linux-meta-samba
+pkgver=2022.11
+pkgrel=1
+arch=('any')
+url="https://wiki.archlinux.org/title/Samba"
+license=('GPL')
+backup=('etc/samba/smb.conf')
+pkgdesc="Meta package for samba support."
+depends=("samba" "avahi" "nss-mdns" "gvfs-smb")
+optdepends=('kdenetwork-filesharing: Sharing a folder via Dolphin'
+	'nemo-share: Sharing a folder via Nemo'
+	'nautilus-share: Sharing a folder via Nautilus'
+	'caja-share: Sharing a folder via Caja'
+	'thunar-shares-plugin: Sharing a folder via Thunar')
+install=samba.install
+source=('smb.conf.adklinux')
+md5sums=('e13bb0a0d13bc2762dcf059f02433bf2')
+package() {
+        install -Dm644 smb.conf.adklinux $pkgdir/etc/samba/smb.conf
+        mkdir -p $pkgdir/var/lib/samba/usershares
+        chmod 1770 $pkgdir/var/lib/samba/usershares
+}

@@ -1,0 +1,36 @@
+## Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-live-rescue-git
+_pkgname=adk-live-rescue
+_destname1="/usr/bin"
+_destname2="/usr/share"
+_destname3=
+_destname4=
+_destname5=
+pkgver=2022.11
+pkgrel=1
+pkgdesc="A Bash Script to Rescue a ADK-Linux System from a Live Enviroment"
+arch=('x86_64')
+url="https://wiki.archlinux.org/title/Chroot"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${_pkgname}")
+options=(!strip !emptydirs)
+source=("git+https://github.com/Technopig100/adk-live-rescue.git")
+sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r ${srcdir}/${_pkgname}${_destname2}/* ${pkgdir}${_destname2}
+}
+

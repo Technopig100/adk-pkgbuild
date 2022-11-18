@@ -1,0 +1,32 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-updateinfo-git # '-bzr', '-git', '-hg' or '-svn'
+_pkgname=adk-updateinfo
+_destname1="etc"
+pkgver=2022.11
+pkgrel=1
+_licensedir="/usr/share/licenses/"
+pkgdesc="Provides news and info about ADK-Linux"
+arch=('x86_64')
+url="https://github.com/Technopig100/${_pkgname}"
+license=('GPL3')
+depends=('nano')
+makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
+replaces=('adk-updateinfo')
+install=$_pkgname.install
+source=(${_pkgname}::git+$url)
+md5sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+  install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+  install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+  cp -r ${srcdir}/${_pkgname}/$_destname1/ ${pkgdir}
+}
+

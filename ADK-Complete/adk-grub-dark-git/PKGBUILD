@@ -1,0 +1,30 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-grub-dark-git
+_pkgname=adk-grub-dark
+pkgver=2022.11
+pkgrel=1
+pkgdesc='Simple dark GRUB theme'
+arch=('x86_64')
+url="https://github.com/Technopig100/${_pkgname}"
+license=('GPL3')
+optdepends=('grub-customizer: GUI tool to configure GRUB')
+makedepends=('git')
+replaces=(adk-grub-poly-dark)
+source=("adk-dark::git+https://github.com/Technopig100/adk-grub-dark")
+sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+  install -dm755 "${pkgdir}"/usr/share/grub/themes/
+  install -Dm644 adk-dark/LICENSE "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSE"
+  cp -r --no-preserve=ownership adk-dark "${pkgdir}"/usr/share/grub/themes/
+  rm -rf "${pkgdir}"/usr/share/grub/themes/adk-dark/.git
+  rm "${pkgdir}"/usr/share/grub/themes/adk-dark/LICENSE
+  rm "${pkgdir}"/usr/share/grub/themes/adk-dark/README.md
+}

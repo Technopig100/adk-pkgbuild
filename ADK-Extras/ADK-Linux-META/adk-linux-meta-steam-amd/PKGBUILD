@@ -1,0 +1,35 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-linux-meta-steam-amd
+pkgver=2022.11
+pkgrel=1
+pkgdesc="Installs Steam on ADK-Linux for AMD"
+arch=('any')
+url="https://wiki.archlinux.org/title/Steam"
+license=('MIT' 'GPL3')
+provides=("${pkgname}")
+conflicts=()
+options=(!strip !emptydirs)
+install='readme.install'
+depends=(
+'steam'
+'lib32-libva'
+'lib32-libxtst'
+'lib32-libxrandr'
+'lib32-libpulse'
+'lib32-gdk-pixbuf2'
+'lib32-gtk2'
+'lib32-openal'
+'lib32-mesa'
+'lib32-gcc-libs'
+'lib32-libx11'
+'lib32-libxss'
+'lib32-alsa-plugins'
+'lsof'
+'lib32-libgpg-error'
+'lib32-libindicator-gtk2'
+'lib32-libdbusmenu-glib'
+'lib32-libdbusmenu-gtk2'
+'lib32-nss'
+'ttf-ms-fonts'
+'vulkan-tools')
+

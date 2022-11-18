@@ -1,0 +1,9 @@
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = /usr/bin/baloo_file
+
+[Action]
+Description = Disable baloo file indexer after every upgrade operation
+When = PostTransaction
+Exec = /bin/sh -c 'killall baloo_file ; mv /usr/bin/baloo_file /usr/bin/baloo_file.bak ; echo '#!/bin/sh' > /usr/bin/baloo_file'

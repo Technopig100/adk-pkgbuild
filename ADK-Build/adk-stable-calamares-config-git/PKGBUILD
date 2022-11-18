@@ -1,0 +1,30 @@
+## Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-stable-calamares-config-git
+_pkgname=adk-stable-calamares-config
+_destname1="/etc"
+pkgver=2022.11
+pkgrel=6
+pkgdesc="Calamares configuration files for ADK-Linux"
+arch=('x86_64')
+url="https://github.com/Technopig100"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=(adk-calamares-config-git)
+provides=("${_pkgname}")
+options=(!strip !emptydirs)
+replaces=()
+source=(${_pkgname}::"git+${url}/${_pkgname}")
+sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
+}

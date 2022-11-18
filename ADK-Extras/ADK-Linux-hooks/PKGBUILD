@@ -1,0 +1,22 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+
+pkgname=adk-pmhooks-git
+_pkgname=adk-pmhooks
+_destname1="/usr/share/libalpm/hooks"
+_destname2="/usr/bin"
+pkgver=2022.11
+pkgrel=1
+pkgdesc='Pacman hooks to cleanup your ADK-Linux system with pacman'
+arch=(any)
+depends=(pacman-contrib)
+source=(url/adk-pmhooks.tar.gz)
+md5sums=('a04f34a316cae6be3e3455f935146626')
+
+package() {
+    install -dm755 ${pkgdir}${_destname1}
+    cp -r  ${srcdir}/${_pkgname}${_destname1} ${pkgdir}/usr/share/libalpm/
+
+    install -dm755 ${pkgdir}${_destname2}
+    cp -r  ${srcdir}/${_pkgname}${_destname2} ${pkgdir}/usr/
+}
+

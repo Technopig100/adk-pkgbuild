@@ -1,0 +1,32 @@
+# Maintainer: Jacob <technopig@hotmail.com>
+pkgname=adk-stable-root-git
+_pkgname=adk-stable-root
+_destname1="/etc/skel"
+_destname2="/etc/xdg"
+_licensedir="/usr/share/licenses/"
+pkgver=2022.11
+pkgrel=2
+pkgdesc="Root bashrc.conf from ADK-Stable"
+arch=('any')
+url="https://github.com/Technopig100/adk-stable-root"
+license=('GPL3')
+makedepends=('git' 'most')
+depends=('bash')
+provides=("${pkgname}")
+conflicts=('adk-linux-root-git')
+options=(!strip !emptydirs)
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}/.bashrc-latest ${pkgdir}${_destname1}
+
+		install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destname2}/.bashrc-latest ${pkgdir}${_destname2}
+
+}
+ 

@@ -1,0 +1,16 @@
+post_install() {
+  echo
+  cp /etc/adk-release /etc/lsb-release
+  echo
+  cp /usr/lib/adk-release /usr/lib/os-release
+  echo
+  tput setaf 2
+  echo "[ADK-Linux go vrrrrooom!!]"
+  echo
+  tput sgr0
+  echo
+}
+
+post_upgrade() {
+  post_install
+} 

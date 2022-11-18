@@ -1,0 +1,16 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+
+pkgname=adk-linux-meta-netdisc
+pkgver=2022.11
+pkgrel=1
+arch=('any')
+url="https://wiki.archlinux.org/title/Avahi"
+license=('GPL')
+backup=('etc/nsswitch.conf')
+pkgdesc="Meta package for network-discovery."
+depends=("avahi" "networkmanager" "nss-mdns" "gvfs-smb")
+optdepends=('plasma-nm: Network-discovery via Plasma Networkmanager'
+           )
+install=avahi.install
+md5sums=()
+

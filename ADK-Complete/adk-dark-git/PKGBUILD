@@ -1,0 +1,33 @@
+## Maintainer: Jacob Durant <technopig@hotmail.com>
+
+pkgname="adk-dark-git"
+_pkgname="adk-dark"
+_destname1="/usr/share/icons/"
+_licensedir="/usr/share/licenses/"
+pkgver=2022.11
+pkgrel=1
+pkgdesc="ADK-Dark is a mix of Flat Remix icon theme inspired by material design."
+arch=('x86_64')
+url="https://github.com/Technopig100/adk-dark"
+license=('GPL3')
+makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
+replaces=('adk-dark')
+options=('!strip')
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+
+# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
+# a description of each element in the source array.
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}* ${pkgdir}${_destname1}
+}
+

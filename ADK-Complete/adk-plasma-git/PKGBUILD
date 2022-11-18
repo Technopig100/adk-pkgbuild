@@ -1,0 +1,44 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-plasma-git
+_pkgname=adk-plasma
+_destname1="/etc/skel/.config/"
+_destname2="/etc/skel/.local/share/"
+_destname4="/etc/skel/"
+_licensedir="/usr/share/licenses/"
+pkgver=2022.11
+pkgrel=9
+pkgdesc="Adk-Linux Plasma Desktop Settings"
+arch=('any')
+url="https://github.com/Technopig100/adk-plasma"
+license=('GPL3')
+makedepends=('git')
+depends=('kinit'
+	     'plasma-framework')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+conflicts=('adk-stable-plasma-git' 
+	      'adk-min-plasma-git')
+replaces=(adklinux-plasma-git)
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+
+pkgver() {
+  date +%Y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
+  
+ 	cp -r  ${srcdir}/${_pkgname}${_destname4}.face ${pkgdir}${_destname4}
+
+	cp -r  ${srcdir}/${_pkgname}${_destname4}.face.icon ${pkgdir}${_destname4}
+
+}
