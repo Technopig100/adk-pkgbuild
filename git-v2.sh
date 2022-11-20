@@ -28,7 +28,7 @@ git commit -m "update"
 
 # Push the local files to github
 
-git push -u origin main
+git push -u origin master
 
 
 echo "################################################################"
