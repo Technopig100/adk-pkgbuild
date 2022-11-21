@@ -2,7 +2,7 @@
 pkgname=adk-grub-light-git
 _pkgname=adk-grub-light
 pkgver=2022.04
-pkgrel=1
+pkgrel=01
 pkgdesc='Simple light GRUB theme'
 arch=('x86_64')
 url="https://github.com/Technopig100/${_pkgname}"

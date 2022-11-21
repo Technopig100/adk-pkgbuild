@@ -2,7 +2,7 @@
 
 pkgname=adk-linux-meta-netdisc
 pkgver=2022.11
-pkgrel=1
+pkgrel=01
 arch=('any')
 url="https://wiki.archlinux.org/title/Avahi"
 license=('GPL')

@@ -1,7 +1,7 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-linux-meta-virtualbox
 pkgver=2022.11
-pkgrel=1
+pkgrel=01
 pkgdesc="Installs applications for Virtualbox"
 arch=('any')
 url="https://wiki.archlinux.org/title/VirtualBox"

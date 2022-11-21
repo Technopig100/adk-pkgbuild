@@ -1,7 +1,7 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-linux-meta-steam-amd
 pkgver=2022.11
-pkgrel=1
+pkgrel=01
 pkgdesc="Installs Steam on ADK-Linux for AMD"
 arch=('any')
 url="https://wiki.archlinux.org/title/Steam"

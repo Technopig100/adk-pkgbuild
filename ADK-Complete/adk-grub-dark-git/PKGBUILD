@@ -2,7 +2,7 @@
 pkgname=adk-grub-dark-git
 _pkgname=adk-grub-dark
 pkgver=2022.11
-pkgrel=1
+pkgrel=01
 pkgdesc='Simple dark GRUB theme'
 arch=('x86_64')
 url="https://github.com/Technopig100/${_pkgname}"
