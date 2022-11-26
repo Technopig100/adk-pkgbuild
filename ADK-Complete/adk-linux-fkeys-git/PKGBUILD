@@ -3,8 +3,8 @@ pkgname=adk-linux-fkey-git
 _pkgname=adk-linux-fkey
 _destname1="/usr"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.11
-pkgrel=03
+pkgver=2022.12
+pkgrel=02
 pkgdesc="A Bash Script to refresh Pacman-keys and Databases"
 arch=('x86_64')
 url="https://github.com/Technopig100/"
@@ -15,9 +15,9 @@ options=(!strip !emptydirs)
 source=(adk-linux-fkey::"git+${url}/adk-linux-fkeys")
 sha256sums=('SKIP')
 
-pkgver() {
-  date +%Y.%m
-}
+#pkgver() {
+#  date +%Y.%m
+#}
 
 package() {
 	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
