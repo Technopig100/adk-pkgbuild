@@ -4,8 +4,8 @@ _pkgname=adk-stable-root
 _destname1="/etc/skel"
 _destname2="/etc/xdg"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.11
-pkgrel=02
+pkgver=22.12
+pkgrel=03
 pkgdesc="Root bashrc.conf from ADK-Stable"
 arch=('any')
 url="https://github.com/Technopig100/adk-stable-root"
@@ -18,6 +18,11 @@ options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
 sha256sums=('SKIP')
 install='readme.install'
+
+pkgver() {
+  date +%y.%m
+}
+
 package() {
 	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
 	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}

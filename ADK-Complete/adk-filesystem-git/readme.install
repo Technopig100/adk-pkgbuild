@@ -1,0 +1,21 @@
+post_install() {
+    echo
+    cp -f /etc/adk-sshd_config /etc/sshd_config
+    cp -f /etc/mkinitcpio.d/adk /etc/mkinitcpio.d/linux.preset
+    cp -f /etc/adk-mkinitcpio.conf /etc/mkinitcpio.conf
+    cp -f /etc/adk-passwd /etc/passwd
+    cp -f /etc/adk-shadow /etc/shadow
+    cp -f /etc/adk-gshadow /etc/gshadow
+    cp -f /etc/adk-group /etc/group
+    cp -f /etc/pacman.d/bld-mirrorlist /etc/pacman.d/mirrorlist
+    cp -f /etc/adk-nsswitch.conf /etc/nsswitch.conf
+    cp -f /etc/adk-pacman.conf /etc/pacman.conf
+    cp -f /etc/adk-pamac.conf /etc/pamac.conf 
+    cp -f /etc/default/adk-grub /etc/default/grub
+    cp -f /etc/grub.d/adk-40_custom /etc/grub.d/40_custom
+    echo
+}
+
+post_upgrade() {
+    post_install
+}

@@ -1,7 +1,7 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-meta-wine
-pkgver=2022.11
-pkgrel=01
+pkgver=22.12
+pkgrel=02
 pkgdesc="Installs utilities for Wine on ADK-Linux"
 arch=('any')
 url="https://github.com/lutris/docs/blob/master/WineDependencies.md"
@@ -59,3 +59,7 @@ lib32-gst-plugins-base-libs
 vulkan-icd-loader
 lib32-vulkan-icd-loader
 )
+
+pkgver() {
+  date +%y.%m
+}

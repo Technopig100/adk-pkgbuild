@@ -3,7 +3,7 @@
 pkgname=adk-calamares
 _pkgname=calamares
 pkgver=3.2.61
-pkgrel=03
+pkgrel=07
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -57,4 +57,5 @@ build() {
 package() {
 	cd ${srcdir}/calamares-${pkgver}/build
 	make DESTDIR="$pkgdir" install
+  #install -Dm644 /mnt/fe48aeb3-5afe-4eb9-91ee-d80964f1beaf/Storeage/Working/PKGbuild/ADK-Build/adk-calamares/calamares-3.2.61/calamares.desktop $pkgdir/etc/skel/.config/autostart/calamares.desktop
 }

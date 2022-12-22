@@ -1,8 +1,8 @@
 
 pkgname=adk-linux-keyring-git
 _pkgname=adk-linux-keyring
-pkgver=2022.11
-pkgrel=02
+pkgver=22.12
+pkgrel=03
 pkgdesc='Adk-Linux GPG keyring'
 arch=('any')
 url='http://adklinux.info'
@@ -24,7 +24,7 @@ sha256sums=('f484d69c939e6be58eb1df5c3076a301b2187f6fe399a9f8baeab2f4c26c4652'
             '12ac5047f2af0522f06798b1589ffc4599bc29c91f954d7874e0320634e777c0')
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {

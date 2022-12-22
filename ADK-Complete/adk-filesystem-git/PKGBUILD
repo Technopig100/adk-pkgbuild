@@ -1,0 +1,90 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-filesystem-git
+_pkgname=adk-filesystem
+_destname1="/etc/"
+_destname2="/etc/default/"
+_destname3="/etc/grub.d/"
+_destname4="/etc/mkinitcpio.d/"
+_destname5="/etc/pacman.d/"
+_destname6="/etc/pacman.d/gnupg/"
+_destname7="/etc/pacman.d/hooks/"
+_destname8="/etc/polkit-1/rules.d/"
+_destname9="/etc/sddm.conf.d/"
+_destname10="/etc/ssh/"
+_destname11="/etc/sudoers.d/"
+_destname12="/etc/systemd/system/"
+_destname13="/etc/systemd/system/sockets.target.wants/"
+_destname14="/etc/systemd/system/bluetooth.target.wants/"
+_destname15="/etc/systemd/system/multi-user.target.wants/"
+_destname16="/etc/systemd/system/printers.target.wants/"
+_licensedir="/usr/share/licenses/"
+pkgver=22.12
+pkgrel=04
+pkgdesc="Adk-Linux filesystem"
+arch=('any')
+url="https://github.com/Technopig100/adk-filesystem"
+license=('GPL3')
+makedepends=('git')
+depends=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+conflicts=()
+replaces=()
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+
+pkgver() {
+  date +%y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	install -dm755 ${pkgdir}${_destname2}
+	install -dm755 ${pkgdir}${_destname3}
+	install -dm755 ${pkgdir}${_destname4}
+	install -dm755 ${pkgdir}${_destname5}
+	install -dm755 ${pkgdir}${_destname6}
+	install -dm755 ${pkgdir}${_destname7}
+	install -dm755 ${pkgdir}${_destname8}
+	install -dm755 ${pkgdir}${_destname9}
+	install -dm755 ${pkgdir}${_destname10}
+	install -dm755 ${pkgdir}${_destname11}
+	install -dm755 ${pkgdir}${_destname12}
+	install -dm755 ${pkgdir}${_destname13}
+	install -dm755 ${pkgdir}${_destname14}
+	install -dm755 ${pkgdir}${_destname15}
+	install -dm755 ${pkgdir}${_destname16}
+	install -m644 ${srcdir}/${_pkgname}${_destname1}adk-mkinitcpio.conf ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-passwd ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-shadow ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-group ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-gshadow ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-nsswitch.conf ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-pacman.conf ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}adk-pamac.conf ${pkgdir}${_destname1}
+  install -m644 ${srcdir}/${_pkgname}${_destname1}vconsole.conf ${pkgdir}${_destname1}
+	install -m644 ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
+	install -m644 ${srcdir}/${_pkgname}${_destname3}* ${pkgdir}${_destname3}
+	install -m644 ${srcdir}/${_pkgname}${_destname4}* ${pkgdir}${_destname4}
+	install -m644 ${srcdir}/${_pkgname}${_destname5}bld-mirrorlist ${pkgdir}${_destname5}
+	install -m644 ${srcdir}/${_pkgname}${_destname6}* ${pkgdir}${_destname6}
+	install -m644 ${srcdir}/${_pkgname}${_destname7}* ${pkgdir}${_destname7}
+	install -m644 ${srcdir}/${_pkgname}${_destname8}* ${pkgdir}${_destname8}
+	install -m644 ${srcdir}/${_pkgname}${_destname9}* ${pkgdir}${_destname9}
+	install -m644 ${srcdir}/${_pkgname}${_destname10}* ${pkgdir}${_destname10}
+	install -m644 ${srcdir}/${_pkgname}${_destname11}* ${pkgdir}${_destname11}
+	install -m644 ${srcdir}/${_pkgname}${_destname12}adk-pacman-db.service ${pkgdir}${_destname12}
+	install -m644 ${srcdir}/${_pkgname}${_destname12}dbus-org.bluez.service ${pkgdir}${_destname12}
+	install -m644 ${srcdir}/${_pkgname}${_destname12}dbus-org.freedesktop.Avahi.service ${pkgdir}${_destname12}
+	install -m644 ${srcdir}/${_pkgname}${_destname12}default.target ${pkgdir}${_destname12}
+	install -m644 ${srcdir}/${_pkgname}${_destname12}display-manager.service ${pkgdir}${_destname12}
+	install -m644 ${srcdir}/${_pkgname}${_destname13}* ${pkgdir}${_destname13}
+	install -m644 ${srcdir}/${_pkgname}${_destname14}* ${pkgdir}${_destname14}
+	install -m644 ${srcdir}/${_pkgname}${_destname15}* ${pkgdir}${_destname15}
+	install -m644 ${srcdir}/${_pkgname}${_destname16}* ${pkgdir}${_destname16}
+
+}

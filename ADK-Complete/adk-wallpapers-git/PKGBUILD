@@ -2,8 +2,9 @@
 pkgname=adk-wallpaper-git
 _pkgname=adk-wallpapers
 _destname1="/usr/share/wallpapers/adk-linux-wallpaper/"
+_destname2="/usr/share/backgrounds/"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.11
+pkgver=22.12
 pkgrel=02
 pkgdesc="Wallpapers for ADK-Linux"
 arch=('any')
@@ -15,9 +16,10 @@ options=(!strip !emptydirs)
 replaces=(adk-wallpapers)
 source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
 sha256sums=('SKIP')
+##install='readme.install'
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {
@@ -25,7 +27,10 @@ package() {
     install -dm755 ${pkgdir}${_licensedir}${_pkgname}
     install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
 
-	install -dm755 ${pkgdir}${_destname1}
-	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+	  install -dm755 ${pkgdir}${_destname1}
+	  cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+
+    install -dm755 ${pkgdir}${_destname2}
+    cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
 
 } 

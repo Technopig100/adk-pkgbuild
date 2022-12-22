@@ -1,0 +1,9 @@
+post_install() {
+    echo
+    ln -s /usr/share/wallpapers/adk-linux-wallpaper/ /usr/share/backgrounds/adk-linux-wallpaper
+    echo
+}
+
+post_upgrade() {
+    post_install
+}

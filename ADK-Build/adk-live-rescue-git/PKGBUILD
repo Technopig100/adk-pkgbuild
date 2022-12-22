@@ -6,8 +6,8 @@ _destname2="/usr/share"
 _destname3=
 _destname4=
 _destname5=
-pkgver=2022.11
-pkgrel=01
+pkgver=22.12
+pkgrel=02
 pkgdesc="A Bash Script to Rescue a ADK-Linux System from a Live Enviroment"
 arch=('x86_64')
 url="https://wiki.archlinux.org/title/Chroot"
@@ -24,7 +24,7 @@ sha256sums=('SKIP')
 # a description of each element in the source array.
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {

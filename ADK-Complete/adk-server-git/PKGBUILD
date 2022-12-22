@@ -1,0 +1,38 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-server-git
+_pkgname=adk-server
+_destname1="/etc/adklinux/"
+_destname2="/etc/systemd/system/"
+_licensedir="/usr/share/licenses/"
+pkgver=22.12
+pkgrel=01
+pkgdesc="Adk-Linux xfce Desktop Settings"
+arch=('any')
+url="https://github.com/Technopig100/adk-server"
+license=('GPL3')
+makedepends=('git')
+depends=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+conflicts=('adk-stable-plasma-git' 
+	      'adk-min-plasma-git')
+replaces=()
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+
+pkgver() {
+  date +%y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+
+  install -dm755 ${pkgdir}${_destname2} 
+	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
+
+}

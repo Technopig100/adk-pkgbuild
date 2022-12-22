@@ -1,8 +1,8 @@
 # Maintainer: Jacob Durant <technopig@hotmail.com>
 pkgname=adk-grub-dark-git
 _pkgname=adk-grub-dark
-pkgver=2022.11
-pkgrel=01
+pkgver=22.12
+pkgrel=02
 pkgdesc='Simple dark GRUB theme'
 arch=('x86_64')
 url="https://github.com/Technopig100/${_pkgname}"
@@ -17,7 +17,7 @@ sha256sums=('SKIP')
 # a description of each element in the source array.
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {

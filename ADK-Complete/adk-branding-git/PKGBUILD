@@ -5,14 +5,18 @@ _destname1="/etc/"
 _destname2="/usr/share/libalpm/hooks/"
 _destname3="/usr/lib/"
 _destname4="/etc/xdg/"
-pkgver=22.11
-pkgrel=1
-pkgdesc="Adk-Linux ISO Branding"
+_destname5="/usr/share/pixmaps/"
+_destname6="/usr/bin/"
+_destname7="/usr/share/systemd/bootctl/"
+pkgver=22.12
+pkgrel=17
+pkgdesc="Adk-Linux ISO Branding Hooks"
 arch=('x86_64')
 url="https://github.com/Technopig100/adk-branding-config.git"
 license=('GPL3')
 makedepends=('git')
-depends=()
+depends=('adk-dark-git'
+				'filesystem')
 conflicts=('adklinux-iso-config-git')
 provides=("${pkgname}")
 _licensedir="/usr/share/licenses/"
@@ -26,7 +30,7 @@ sha256sums=('SKIP')
 # a description of each element in the source array.
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {
@@ -35,14 +39,24 @@ package() {
 
 	install -dm755 ${pkgdir}${_destname1}
 	 cp -r  ${srcdir}/${_pkgname}${_destname1}adk-release ${pkgdir}${_destname1}
+	 cp -r  ${srcdir}/${_pkgname}${_destname1}mota ${pkgdir}${_destname1}
 
 	install -dm755 ${pkgdir}${_destname2}
-	 cp -r  ${srcdir}/${_pkgname}${_destname2}lsb-release.hook ${pkgdir}${_destname2}
- 	 cp -r  ${srcdir}/${_pkgname}${_destname2}os-release.hook ${pkgdir}${_destname2}
+	 cp -r  ${srcdir}/${_pkgname}${_destname2}adk-god.hook ${pkgdir}${_destname2}
  	 
 	install -dm755 ${pkgdir}${_destname3}
 	 cp -r  ${srcdir}/${_pkgname}${_destname3}adk-release ${pkgdir}${_destname3}
 
 	install -dm755 ${pkgdir}${_destname4}
 	cp -r  ${srcdir}/${_pkgname}${_destname4}* ${pkgdir}${_destname4}
+
+	install -dm755 ${pkgdir}${_destname5}
+	cp -r  ${srcdir}/${_pkgname}${_destname5}* ${pkgdir}${_destname5}
+
+ 	install -dm755 ${pkgdir}${_destname6}
+ 	cp -r  ${srcdir}/${_pkgname}${_destname6}* ${pkgdir}${_destname6}
+	
+	install -dm755 ${pkgdir}${_destname7}
+ 	cp -r  ${srcdir}/${_pkgname}${_destname7}* ${pkgdir}${_destname7}
+
 }

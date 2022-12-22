@@ -2,9 +2,9 @@
 pkgname=adk-stable-calamares-config-git
 _pkgname=adk-stable-calamares-config
 _destname1="/etc"
-pkgver=2022.11
-pkgrel=12
-pkgdesc="Calamares configuration files for ADK-Linux"
+pkgver=22.12
+pkgrel=01
+pkgdesc="Calamares configuration files for ADK-Linux Stable"
 arch=('x86_64')
 url="https://github.com/Technopig100"
 license=('GPL3')
@@ -21,7 +21,7 @@ sha256sums=('SKIP')
 # a description of each element in the source array.
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {

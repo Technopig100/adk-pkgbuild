@@ -1,11 +1,11 @@
 post_install() {
-  echo
-  cp /etc/adk-release /etc/lsb-release
-  echo
-  cp /usr/lib/adk-release /usr/lib/os-release
-  echo
+  cp -f /etc/adk-release /etc/lsb-release
+  cp -f /usr/lib/adk-release /usr/lib/os-release
+  unlink /usr/share/icons/default/cursors
+  rm -f /usr/share/pixmaps/archlinux*
+  ln -s /usr/share/icons/adk-dark/cursors /usr/share/icons/default/cursors
   tput setaf 2
-  echo "[ADK-Linux go vrrrrooom!!]"
+  echo "[ADK-Linux go bada-boooooom!!]"
   echo
   tput sgr0
   echo

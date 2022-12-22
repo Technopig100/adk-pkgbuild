@@ -1,0 +1,47 @@
+# Maintainer: Jacob Durant <technopig@hotmail.com>
+pkgname=adk-gnome-git
+_pkgname=adk-gnome
+_destname1="/etc/skel/.config/"
+_destname2="/etc/skel/.local/share/"
+_destname4="/etc/skel/"
+_destname5="/etc/adklinux/"
+_licensedir="/usr/share/licenses/"
+pkgver=22.12
+pkgrel=06
+pkgdesc="Adk-Linux gnome Desktop Settings"
+arch=('any')
+url="https://github.com/Technopig100/adk-gnome"
+license=('GPL3')
+makedepends=('git')
+depends=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+conflicts=('adk-stable-plasma-git' 
+	      'adk-min-plasma-git')
+replaces=()
+source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
+sha256sums=('SKIP')
+install='readme.install'
+
+pkgver() {
+  date +%y.%m
+}
+
+package() {
+	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
+	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}
+
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r  ${srcdir}/${_pkgname}${_destname1}* ${pkgdir}${_destname1}
+
+	install -dm755 ${pkgdir}${_destname2}
+	cp -r  ${srcdir}/${_pkgname}${_destname2}* ${pkgdir}${_destname2}
+  
+ 	cp -r  ${srcdir}/${_pkgname}${_destname4}.face ${pkgdir}${_destname4}
+
+	cp -r  ${srcdir}/${_pkgname}${_destname4}.face.icon ${pkgdir}${_destname4}
+  
+  install -dm755 ${pkgdir}${_destname5} 
+	cp -r  ${srcdir}/${_pkgname}${_destname5}* ${pkgdir}${_destname5}
+
+}

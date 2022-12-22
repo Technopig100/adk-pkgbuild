@@ -1,0 +1,12 @@
+post_install() {
+    echo
+    ln -s /etc/adklinux /etc/linuxmint
+    echo
+    echo -e "\n** The files have been installed in /etc/skel/.config/ **"
+    #echo -e "** The files have been installed in /etc/skel/.local/ **"
+    echo -e "** The files have been installed in /etc/skel/ **\n"
+}
+
+post_upgrade() {
+    post_install
+}

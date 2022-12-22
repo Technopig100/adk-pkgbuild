@@ -6,15 +6,15 @@ _destname2="/usr/share"
 _destname3=
 _destname4=
 _destname5=
-pkgver=2022.11
-pkgrel=01
+pkgver=22.12
+pkgrel=02
 pkgdesc="A Bash Script to refresh Pacman-keys and Databases"
 arch=('x86_64')
 url="https://wiki.archlinux.org/title/DeveloperWiki:Package_Signing_Proposal_for_Pacman#Pacman's_keyring"
 license=('GPL3')
 makedepends=('git')
 depends=()
-conflicts=()
+conflicts=('adk-linux-fkey-git')
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
 source=("git+https://github.com/Technopig100/adk-fkeys.git")
@@ -23,9 +23,9 @@ sha256sums=('SKIP')
 # Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
 # a description of each element in the source array.
 
-pkgver() {
-  date +%Y.%m
-}
+#pkgver() {
+#  date +%y.%m
+#}
 
 package() {
 	install -dm755 ${pkgdir}${_destname1}

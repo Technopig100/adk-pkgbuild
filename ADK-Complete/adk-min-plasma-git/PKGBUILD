@@ -4,10 +4,11 @@ _pkgname=adk-min-plasma
 _destname1="/etc/skel/.config/"
 _destname2="/etc/skel/.local/share/"
 _destname4="/etc/skel/"
+_destname5="/etc/adklinux/"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.12
-pkgrel=04
-pkgdesc="ADK-Linux Plasma Desktop Settings"
+pkgver=22.12
+pkgrel=16
+pkgdesc="ADK-Linux Plasma Desktop Settings For Min"
 arch=('any')
 url="https://github.com/Technopig100/adk-min-plasma"
 license=('GPL3')
@@ -22,9 +23,9 @@ source=(${_pkgname}::"git+https://github.com/Technopig100/${_pkgname}.git")
 sha256sums=('SKIP')
 install='readme.install'
 
-#pkgver() {
-#  date +%Y.%m
-#}
+pkgver() {
+  date +%y.%m
+}
 
 package() {
 	install -dm755 ${pkgdir}${_licensedir}${_pkgname}
@@ -39,4 +40,8 @@ package() {
  	cp -r  ${srcdir}/${_pkgname}${_destname4}.face ${pkgdir}${_destname4}
 
 	cp -r  ${srcdir}/${_pkgname}${_destname4}.face.icon ${pkgdir}${_destname4}
+
+	install -dm755 ${pkgdir}${_destname5} 
+	cp -r  ${srcdir}/${_pkgname}${_destname5}* ${pkgdir}${_destname5}
+
 }

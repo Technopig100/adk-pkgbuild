@@ -3,8 +3,8 @@ pkgname=adk-system-installation-git
 _pkgname=adk-system-installation
 _destname1="/etc/skel/Desktop"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.11
-pkgrel=01
+pkgver=22.12
+pkgrel=04
 pkgdesc="System files for ADK-Linux"
 arch=('any')
 url="https://github.com/Technopig100"
@@ -19,7 +19,7 @@ source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {
@@ -28,4 +28,5 @@ package() {
 
 	install -dm755 ${pkgdir}${_destname1}
 	cp -r ${srcdir}/${_pkgname}${_destname1}/* ${pkgdir}${_destname1}
+
 }

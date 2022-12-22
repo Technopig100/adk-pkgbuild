@@ -1,0 +1,17 @@
+# Maintainer: scan
+pkgname=breezex-light
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Breezex Light Cursor Theme."
+arch=('any')
+url="https://github.com/ful1e5/BreezeX_Cursor"
+license=('GPL')
+source=("https://github.com/ful1e5/BreezeX_Cursor/releases/download/v$pkgver/BreezeX-Light.tar.gz")
+sha256sums=('9f339954d999811a5760e4f51ff6c9b55d219444144f08bebbed994d9c52f0cf')
+
+package() {
+	install -d $pkgdir/usr/share/icons
+	cp -r BreezeX-Light $pkgdir/usr/share/icons/BreezeX-Light
+	find ${pkgdir} -type f -exec chmod 644 {} \;
+	find ${pkgdir} -type d -exec chmod 755 {} \;
+}

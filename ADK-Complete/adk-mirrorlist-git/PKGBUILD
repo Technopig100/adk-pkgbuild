@@ -3,8 +3,8 @@ pkgname=adk-mirrorlist-git
 _pkgname=adk-mirrorlist
 _destname1="/etc/pacman.d"
 _licensedir="/usr/share/licenses/"
-pkgver=2022.11
-pkgrel=01
+pkgver=22.12
+pkgrel=02
 pkgdesc="Mirrorlist for ADK-Linux"
 arch=('any')
 url="https://github.com/Technopig100"
@@ -19,7 +19,7 @@ source=(${_pkgname}::"git+${url}/${_pkgname}")
 sha256sums=('SKIP')
 
 pkgver() {
-  date +%Y.%m
+  date +%y.%m
 }
 
 package() {
