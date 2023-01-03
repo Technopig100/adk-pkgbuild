@@ -2,8 +2,8 @@
 pkgname=adk-cinnamon-calamares-config-git
 _pkgname=adk-cinnamon-calamares-config
 _destname1="/etc"
-pkgver=22.12
-pkgrel=04
+pkgver=23.01
+pkgrel=01
 pkgdesc="Calamares configuration files for ADK-Linux-Cinnamon"
 arch=('x86_64')
 url="https://github.com/Technopig100"
